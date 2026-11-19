@@ -1,0 +1,13 @@
+{
+  "source": "Yahoo Finance via yfinance.download",
+  "yfinance_version": "1.8.0",
+  "auto_adjust": false,
+  "actions": true,
+  "start": "2026-01-05",
+  "end_exclusive": "2026-11-14",
+  "downloaded_at_utc": "2026-11-15T11:37:11.389684+00:00",
+  "tickers_requested": 83,
+  "tickers_returned": 83,
+  "rows": 17430,
+  "note": "Yahoo vendor snapshot requested with auto_adjust=False; still not verified as exchange prints and historical split basis may be adjusted (GLOBAL tick exceptions observed). Not approved as execution prices."
+}

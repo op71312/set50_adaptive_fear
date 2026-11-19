@@ -1,0 +1,22 @@
+Test,Status,Evidence
+Nine strategies and seven allocation methods,PASS,9 strategies x 7 methods = 63 records
+Panic/FOMO/Normal strategy actions,PASS,all strategies follow matrix; actual/future columns do not affect actions
+Normal is always HOLD,PASS,Normal maps to HOLD for all nine strategies
+No-buy strategy set remains all-cash,PASS,"['S5_PanicSell_FOMOSell', 'S6_PanicSell_FOMOHold', 'S8_PanicHold_FOMOSell', 'S9_PanicHold_FOMOHold']: no BUY actions from an all-cash/no-holdings state"
+CVaR fractional tail boundary tie,PASS,tail_mass=1.5000000000000013; tied=3; per_tie=0.16666667
+CVaR 59 observations insufficient,PASS,"status=UNAVAILABLE; window_observations=59; reason=INSUFFICIENT_COMMON_OBSERVATIONS:required=60, observed=59"
+CVaR expanding window at 60 observations,PASS,status=ALLOCATED; expanding_window=60; cutoff=2025-03-26; future shock excluded
+CVaR expanding window at 100 observations,PASS,status=ALLOCATED; expanding_window=100; cutoff=2025-05-21; future shock excluded
+CVaR expanding window at 180 observations,PASS,status=ALLOCATED; expanding_window=180; cutoff=2025-09-10; future shock excluded
+Non-finite features rejected before inference,PASS,inference_rows=1; rejected=['BBB']
+EW allocation caps,PASS,max_weight=0.200000; sum=1.000000
+25% cap iteratively redistributes overflow,PASS,"weights=[0.25, 0.25, 0.25]; allocated=750.0; residual_cash=250.0"
+CVaR solver failure retains fail-closed cash,PASS,status=UNAVAILABLE; weights={}; reason=CVAR_SOLVER_FAILED:synthetic solver failure
+"Sell, forced-exit, buy, hold order and transaction costs",PASS,"stages=['SIGNAL_SELL', 'FORCED_EXIT', 'BUY']; fees=4.33945242; cash=7552.35939344; positions={'S': 0.0, 'F': 0.0, 'H': 4.0, 'B': 502.14408673974486}"
+Sell without position creates no phantom sale,PASS,no position; zero transactions; cash unchanged
+Missing Open is NO_FILL without substitution,PASS,NO_FILL; no price substitution; cash and positions unchanged
+Portfolio equity equals cash plus marked holdings,PASS,cash=100.0; market_value=20.0; equity=120.0
+Stale valuation threshold uses observed-session ordinal,PASS,observed-session age 3 stale; age 4 unavailable; not verified exchange sessions
+E-004 annualized metrics not reported under vendor calendar,PASS,"annualized columns cleared=['Annualized_Return', 'Annualized_Volatility', 'Sharpe_Ratio', 'Sortino_Ratio', 'Calmar_Ratio']; status=NOT_REPORTED_OBSERVED_VENDOR_CALENDAR"
+E-004 annualization threshold is exactly 252 intervals,PASS,251=UNANNUALIZED_BELOW_252_INTERVALS; 252=ANNUALIZED_252_VERIFIED_INTERVALS (synthetic interval fixture)
+E-029 run lineage fields complete,PASS,required lineage IDs and risk-data hash present

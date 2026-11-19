@@ -1,0 +1,12 @@
+{
+  "verified_dataset_created": false,
+  "yfinance_redownload_performed": false,
+  "original_snapshot_modified": false,
+  "missing_inputs": [
+    "D:\\Project_Github\\set_fear_index\\dataset\\SET_Execution_OHLCV_Source_Patch.csv",
+    "D:\\Project_Github\\set_fear_index\\dataset\\SET_trading_calendar_2026.csv",
+    "D:\\Project_Github\\set_fear_index\\dataset\\official_corporate_actions_2026.csv"
+  ],
+  "verified_output_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_verified_v2.parquet",
+  "blocker": "A vendor-derived candidate is not a substitute for official/authorized source patches or SET trading-status data."
+}

@@ -1,0 +1,88 @@
+{
+  "Run_ID": "RPR-829A43493C6B4CADACEC3ED50621C407",
+  "Run_Mode": "RESEARCH_PROXY",
+  "Audit_Mode": "READ_ONLY_OUTPUT_RECONCILIATION_NO_BACKTEST_RERUN",
+  "Run_Output_Directory": "D:\\Project_Github\\set_fear_index\\backtest_results\\notebook_08_research_proxy\\RPR-829A43493C6B4CADACEC3ED50621C407",
+  "Reconciliation_Output_Directory": "D:\\Project_Github\\set_fear_index\\backtest_results\\notebook_08_research_proxy\\RPR-829A43493C6B4CADACEC3ED50621C407\\targeted_reconciliation",
+  "Gate_Status_Unchanged": {
+    "RESEARCH_BACKTEST_GATE": "CONDITIONAL_OPEN",
+    "EXECUTION_VALIDATION_GATE": "BLOCKED",
+    "Canonical_Historical_Gate": "BLOCKED",
+    "PHASE_F": "DO_NOT_BEGIN"
+  },
+  "Run_Lineage_Hashes_From_Run_Manifest": {
+    "Notebook_07_SHA256": "77ef752a98612fd85132a63371587103c08f89662c7109d433a313aaf498f070",
+    "Notebook_08_SHA256": "5b375e7a9b5ace41c4eb95919d7a6dfe881833fa1bf193983a9e3afc5533d081",
+    "Model_Artifact_SHA256": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+    "Run_Source_File_SHA256": {
+      "Feature_Candidate": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+      "Execution_Snapshot": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+      "Execution_Sidecar": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+      "Model_Artifact": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+      "Model_Metadata": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be",
+      "Membership_Periods": "17002a2e63259c8144589df02bcfa9c82be1ba6285e5e142e63281779b23ddac",
+      "Membership_Changes": "6d2d9b408d2c2a94e53ef5fdb7f99ce66137dddc17d0a154660f2b2e63c4d39f",
+      "Membership_2026_Evidence": "0458ce66c9628e6f711e58fcd94e65a9952cf3b618354b70a3f46847b2a2b4ba",
+      "Exclusions": "2d10f6ba17cf712d32fc92c05f8dea7c766bb292b2f66bb2410fc4693878df11",
+      "Corporate_Actions": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+      "Decision_Register": "7cc61072a253a358c7613f2e9fb29ed57a52a5c80eaf0312951d75c8e3bd8c92",
+      "Blocker_Matrix": "c8fe7d47b9f0fd47a25ddeca649abd888fa59fa0baba097c3b110364eef54f87",
+      "Notebook_07_Implementation": "77ef752a98612fd85132a63371587103c08f89662c7109d433a313aaf498f070"
+    },
+    "Run_Source_File_SHA256_After": {
+      "Feature_Candidate": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+      "Execution_Snapshot": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+      "Execution_Sidecar": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+      "Model_Artifact": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+      "Model_Metadata": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be",
+      "Membership_Periods": "17002a2e63259c8144589df02bcfa9c82be1ba6285e5e142e63281779b23ddac",
+      "Membership_Changes": "6d2d9b408d2c2a94e53ef5fdb7f99ce66137dddc17d0a154660f2b2e63c4d39f",
+      "Membership_2026_Evidence": "0458ce66c9628e6f711e58fcd94e65a9952cf3b618354b70a3f46847b2a2b4ba",
+      "Exclusions": "2d10f6ba17cf712d32fc92c05f8dea7c766bb292b2f66bb2410fc4693878df11",
+      "Corporate_Actions": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+      "Decision_Register": "7cc61072a253a358c7613f2e9fb29ed57a52a5c80eaf0312951d75c8e3bd8c92",
+      "Blocker_Matrix": "c8fe7d47b9f0fd47a25ddeca649abd888fa59fa0baba097c3b110364eef54f87",
+      "Notebook_07_Implementation": "77ef752a98612fd85132a63371587103c08f89662c7109d433a313aaf498f070"
+    }
+  },
+  "Input_SHA256": {
+    "run_manifest.json": "bb380545e2d470196b202859ea990aa099b020d309d588e9d72233909921b69a",
+    "SHA256SUMS.txt": "f5167e018fe89c85d099a9d6c2e75d255a473bb69ed18b45ab51027e751bd79a",
+    "combination_status_63.csv": "2d5ac69ea54a1976fc322e0e52f5031603dc4324d1e3204a8fbdf0bf2f724be8",
+    "performance_summary_63.csv": "858cf90f21c09696c7427cd1350248c06db52b788aa370cb0e007813644d62f0",
+    "transactions.csv": "c66ffbb65a03cc6035d7c22944ce841942b5386b19865d10ef7f4351ac725597",
+    "daily_portfolio.csv": "5d772e5d634d35a22886b15a4fbb6ddfc11a6c718a9add00db6ad0aa86e7f4cb",
+    "position_valuation.csv": "498215da5090a760740a0aa09609d0cbc3e714638a2115660baac62d7cc1f878",
+    "predictions.csv": "e1002b30902c21885ffc92cbb360290f05ccde602f8f8ecf4f998240b1f519d2",
+    "allocation_weights.csv": "7036775095dfbdd5920c0afffc2773ea7baa219a32b55ef604fcdfe8043b5c07"
+  },
+  "Output_SHA256_Excluding_This_Manifest": {
+    "01_transaction_cost_reconciliation.csv": "84a55833c64e0c4f42d726d2bc33320edd93f5e13aa38a8f6621ff9cc9454fd5",
+    "02_no_buy_strategy_validation.csv": "3246b7fdcc815e49ff049c154312a5f105180cba9dd8927d210abbfb3ab6998f",
+    "03_equity_curve_reconciliation.csv": "60cec426a3b48f0c352e342e98675db436f5e701c58a592c3c46ba13d4e137e8",
+    "04_stale_valuation_reconciliation.csv": "8bb204b44e83fe4bef9864c5a7f1c0771cba0951a86960802fbbcb4f3e110cb1",
+    "TARGETED_RECONCILIATION_REPORT.md": "215f6d0d79e4a63c25d5752debe3167d78d50b7236318084dad8c3edc41ee671"
+  },
+  "Reconciliation_Facts": {
+    "Run_Checksums_Validated": true,
+    "Combination_Count": 63,
+    "Completed_With_Limitations": 54,
+    "Insufficient_History": 9,
+    "Filled_Transaction_Count": 6019,
+    "Cost_Ledger_Pass_Count_Of_Completed": 54,
+    "Mean_Equity_Turnover_Pass_Count_Of_Completed": 54,
+    "Daily_Arithmetic_Pass_Count_Of_Completed": 54,
+    "Max_Equity_Identity_Residual": 2.3283064365386963e-10,
+    "Max_Cash_Bridge_Residual": 1.382431946694851e-10,
+    "Max_Total_Return_Error": 0.0,
+    "Max_Max_Drawdown_Error": 0.0,
+    "All_Transaction_Dates_Next_Observed_Session": true,
+    "All_Predictor_Dates_Precede_Execution": true,
+    "Max_Observed_Valuation_Age": 0.0,
+    "All_Daily_Stale_Holding_Counts_Zero": true,
+    "Position_Valuation_Has_Combination_Identifiers": false,
+    "Official_Calendar_Verified": false
+  },
+  "Status_Interpretation": "PASS applies only to directly recomputed output arithmetic. Claims lacking run-output evidence are NOT_VERIFIABLE.",
+  "Manifest_Self_Hash": "Not embedded to avoid self-reference; compute SHA256 of this file externally."
+}

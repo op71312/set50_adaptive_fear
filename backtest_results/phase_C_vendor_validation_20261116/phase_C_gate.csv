@@ -1,0 +1,17 @@
+﻿Requirement,Status,Evidence,Remaining_Limitation_or_Blocker
+"Protected snapshot, immutable copy, Master, model, membership, declarations and Notebook 05 unchanged",PASS,Current SHA-256 values match Phase B recorded hashes.,Notebook 06 is the only source notebook intentionally edited.
+2026 membership supported by official primary source,PASS,"Both SET PDFs were retrieved, extracted and match the local 50-symbol H1/H2 lists.",No official 2026 session calendar was retrieved.
+Vendor provenance recovery,PASS_WITH_LIMITATIONS,"Provider, library version, retrieval time, date range, auto_adjust, actions, and source hash are recorded.","Exact ticker list, interval, group_by, timezone and exact feature-acquisition run remain UNKNOWN."
+BANPU missing execution impact,PASS_WITH_LIMITATIONS,BANPU is excluded for 2026; 253 missing OHLC cells remain; execution bars are not inputs to feature formulas.,Precomputed BANPU feature effects are bounded by excluding the affected dates and the 60-observation washout.
+BANPU excluded before model inference,PASS,Notebook 06 has pre-inference exclusion and the dedicated test passes; synthetic suite 18/18.,The Master and frozen model were not changed.
+GLOBAL investigation / exclusion,PASS_WITH_LIMITATIONS,141 basis diagnostic field-rows are confined to GLOBAL; GLOBAL is absent from both official 2026 membership lists.,No official corporate-action confirmation; no split is asserted.
+Corporate-action impact in eligible sample,PASS_WITH_LIMITATIONS,Event-bearing 2026 member symbols are excluded; the four eligible rows are AOT with no local ledger or Yahoo action row.,All 141 ledger rows remain unconfirmed; only vendor/local evidence is available.
+Identity confidence in eligible sample,PASS_WITH_LIMITATIONS,AOT has continuous vendor ticker-key observations and no local identity transition row.,No official issuer-ID confirmation; BANPU remains identity-unresolved and excluded.
+2017_H1 historical membership/model context,BLOCKED,One blank membership slot; no primary SET 2017 source; model training period includes 2017.,Do not fill the missing name or retrain the frozen model.
+Execution quality for eligible AOT rows,PASS_WITH_LIMITATIONS,"All four next-date AOT records have valid OHLC, positive volume and no flagged basis anomaly.","Snapshot-wide missing/zero volume, repeated closes and unverified vendor basis remain documented."
+Date alignment,PASS_WITH_LIMITATIONS,Candidate dates use the next date observed in the pinned vendor snapshot; no generic weekday calendar is substituted.,Official 2026 trading calendar remains unavailable.
+Tradable candidate universe non-empty,PASS,4 candidate member-date rows across 1 symbol(s).,A non-empty candidate is not an approved backtest universe.
+"Board-lot, stale valuation and allocator fallback policies resolved",BLOCKED,Notebook 06 still has unresolved board-lot/stale policies; no policy was invented.,Required before any portfolio run.
+CVaR formulation approved,BLOCKED,No approved CVaR formulation was found; allocation methods were not changed.,Required before any CVaR combination can run.
+Research Backtest Gate,BLOCKED,The gate remains closed; no 63-combination backtest was run.,Historical model context and research-methodology blockers remain.
+PHASE_C_OVERALL,BLOCKED,A candidate sample was constructed; critical blockers remain.,Do not open the Research Backtest Gate or run portfolio combinations.

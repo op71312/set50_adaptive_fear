@@ -1,0 +1,40 @@
+{
+    "model_name": "Original Softmax",
+    "algorithm": "Multinomial Logistic Regression",
+    "prediction_rule": "Argmax",
+    "features": [
+        "daily_return",
+        "momentum_20d",
+        "vol_z",
+        "VolRank",
+        "CorrRank",
+        "LiquidityRank"
+    ],
+    "class_mapping": {
+        "0": "Panic",
+        "1": "FOMO",
+        "2": "Normal"
+    },
+    "best_parameters": {
+        "model__C": 10,
+        "model__class_weight": {
+            "0": 10,
+            "1": 10,
+            "2": 1
+        },
+        "model__l1_ratio": 0
+    },
+    "training_period": "2016-2024",
+    "validation_period": "2025",
+    "test_period": "2026",
+    "training_samples": 94205,
+    "validation_samples": 11824,
+    "test_samples": 10436,
+    "test_metrics": {
+        "accuracy": 0.8305,
+        "macro_f1": 0.3936,
+        "balanced_accuracy": 0.3932,
+        "log_loss": 0.7459
+    },
+    "created_at": "2026-11-15T09:34:35.479083"
+}

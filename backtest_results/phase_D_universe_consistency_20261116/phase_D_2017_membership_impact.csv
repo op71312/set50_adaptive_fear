@@ -1,0 +1,32 @@
+﻿Record_Type,Feature_or_Metric,Observed_Value,Rows_Available,Rows_Missing,Membership_Sensitive,Target_Distribution,Interpretation
+SUMMARY,Membership slots,50,,,,,50 columns in the local 2017_H1 row.
+SUMMARY,Nonblank unique membership symbols,49,,,,,49 names; no duplicate is present.
+SUMMARY,Blank membership slots,1,,,,,Blank slot does not identify the missing security.
+SUMMARY,Master period dates,120,,,,,2017_H1 dates present in the pinned Master.
+SUMMARY,Master rows in 2017_H1,8096,,,,,"All symbols, regardless of local membership."
+SUMMARY,Master unique symbols in 2017_H1,68,,,,,Observed in the pinned Master.
+SUMMARY,Master symbols per date min,67,,,,,Observed per-date symbol count.
+SUMMARY,Master symbols per date max,68,,,,,Observed per-date symbol count.
+SUMMARY,Expected listed member-date slots,5880,,,,,49 local names multiplied by 120 dates.
+SUMMARY,Observed listed member-date rows,5160,,,,,Rows found by joining the current 49-name list to Master.
+SUMMARY,Missing listed member-date rows,720,,,,,Six identified symbols are absent on all 120 dates.
+SUMMARY,Known listed symbols absent from Master,DTAC;GLOW;INTUCH;ROBINS;SCB;TMB,,,,,Exact source symbol names; absence cause not inferred.
+SUMMARY,Master symbols outside the local list,25,,,,,Do not identify the blank 50th constituent.
+SUMMARY,Outside-list complete six-feature and target rows,0,,,,,No complete training row among the outside-list Master records.
+SUMMARY,Current reconstructed 2017_H1 training rows,5144,,,,,Membership join plus all six features and reconstructed target.
+SUMMARY,2017_H1 rows missing CorrRank,16,,,,,These rows do not enter the complete model sample.
+SUMMARY,Frozen model training samples,94205,,,,,Exact match to final_softmax_metadata.json.
+SUMMARY,2017_H1 target 0 in complete training rows,214,,,,,Notebook 04 target alignment.
+SUMMARY,2017_H1 target 1 in complete training rows,282,,,,,Notebook 04 target alignment.
+SUMMARY,2017_H1 target 2 in complete training rows,4648,,,,,Notebook 04 target alignment.
+SUMMARY,2017_H1 target 0 before feature completeness,214,,,,,Target-aligned current-membership rows.
+SUMMARY,2017_H1 target 1 before feature completeness,283,,,,,Target-aligned current-membership rows.
+SUMMARY,2017_H1 target 2 before feature completeness,4663,,,,,Target-aligned current-membership rows.
+SUMMARY,Unknown blank symbol potential additional rows upper bound,120,,,,,At most one member-date row for each of the 120 observed dates; actual availability unknown.
+FEATURE,daily_return,,5160,0,NO direct cross-sectional calculation; sample inclusion can still change.,,Per-symbol feature; membership alone does not change existing symbol values.
+FEATURE,momentum_20d,,5160,0,NO direct cross-sectional calculation; sample inclusion can still change.,,Per-symbol feature; membership alone does not change existing symbol values.
+FEATURE,vol_z,,5160,0,NO direct cross-sectional calculation; sample inclusion can still change.,,Per-symbol feature; membership alone does not change existing symbol values.
+FEATURE,VolRank,,5160,0,YES: cross-sectional rank or proxy input depends on the effective member set.,,A missing member could affect this feature for existing symbols.
+FEATURE,CorrRank,,5144,16,YES: cross-sectional rank or proxy input depends on the effective member set.,,A missing member could affect this feature for existing symbols.
+FEATURE,LiquidityRank,,5160,0,YES: cross-sectional rank or proxy input depends on the effective member set.,,A missing member could affect this feature for existing symbols.
+TARGET,Notebook 04 next-global-feature-date target,5160,5160,0,Indirectly; missing member rows can add observations but do not alter an existing symbol's next-date label.,"{""0"": 214, ""1"": 283, ""2"": 4663}",Reconstructed from the frozen notebook's same-symbol next global feature date; no missing target values were imputed.

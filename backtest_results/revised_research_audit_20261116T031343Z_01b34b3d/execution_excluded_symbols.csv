@@ -1,0 +1,2 @@
+Symbol,Exclusion_Start_Date,Exclusion_End_Date,Exclusion_Reason,Evidence_Path,Evidence_Description,Decision_Status
+BANPU,2026-01-01,2026-12-31,INSUFFICIENT_VERIFIED_EXECUTION_DATA,D:\Project_Github\set_fear_index\backtest_results\execution_data_phase1_20261115T152933Z_64083a5d\execution_data_phase1_report.md,253 missing OHLC cells across 64 dates; no official row-level evidence available. Research-only portfolio eligibility exclusion; source datasets and model remain unchanged.,APPROVED_RESEARCH_EXCLUSION

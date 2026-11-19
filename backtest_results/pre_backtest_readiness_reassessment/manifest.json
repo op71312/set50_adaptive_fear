@@ -1,0 +1,124 @@
+{
+  "schema_version": "pre-backtest-readiness-reassessment-v1",
+  "created_at": "2026-11-16",
+  "scope": "Local evidence-only readiness review; no gate override or execution",
+  "outputs": [
+    "readiness_reassessment_report.md",
+    "blocker_status_matrix.csv",
+    "evidence_inventory.csv",
+    "unresolved_risks.md",
+    "decision_required.md",
+    "validation_report.md"
+  ],
+  "overall_gate": "BLOCKED",
+  "phase_F": "DO_NOT_BEGIN",
+  "reassessment": {
+    "phase_A": "BLOCKED",
+    "phase_B": "BLOCKED",
+    "phase_C": "BLOCKED",
+    "phase_D": "BLOCKED",
+    "phase_E_decisions_E005_E020": "APPROVED_SPECIFICATION_ONLY",
+    "verified_2026_membership": {
+      "h1_entries": 50,
+      "h2_entries": 50,
+      "local_official_matches": 100,
+      "union_symbols": 54
+    },
+    "historical_2017_H1": {
+      "nonblank_unique_symbols": 49,
+      "slots": 50,
+      "blank_slots": 1,
+      "status": "BLOCKED"
+    },
+    "candidate_universe": {
+      "symbols": [
+        "AOT"
+      ],
+      "symbol_count": 1,
+      "vendor_candidate_member_date_rows": 4,
+      "fully_verified_tradable_rows": 0,
+      "multi_security_readiness": "BLOCKED"
+    },
+    "allocation_methods": {
+      "historically_ready": 0,
+      "total": 7,
+      "notebook_06_implemented": [
+        "EW",
+        "IV"
+      ],
+      "implementation_count": 2
+    },
+    "corporate_actions": {
+      "ledger_rows": 141,
+      "official_urls": 0,
+      "officially_verified": 0,
+      "confirmed_2026_impact": 0,
+      "terms_applied": 0,
+      "member_union_overlap_rows": 97,
+      "active_membership_recorded_date_rows": 89
+    },
+    "execution_snapshot": {
+      "provider": "Yahoo Finance via yfinance",
+      "yfinance_version": "1.8.0",
+      "retrieval_timestamp_utc": "2026-11-15T11:37:11.389684+00:00",
+      "start": "2026-01-05",
+      "end_exclusive": "2026-11-14",
+      "auto_adjust": false,
+      "actions": true,
+      "rows": 17430,
+      "observed_symbols": 83,
+      "observed_dates": 210,
+      "missing_ohlc_field_cells": 253,
+      "unknown_request_fields": [
+        "exact_requested_ticker_list",
+        "interval",
+        "group_by",
+        "source_timezone"
+      ],
+      "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a"
+    }
+  },
+  "protected_input_sha256": {
+    "05_backtest.ipynb": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41",
+    "06_research_backtest.ipynb": "4b390d06306f74bd9360768fa2ce9ac86a86429fcf6cac66f1bc7800748a1a1c",
+    "dataset/verified_build_20261113_152948/SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "dataset/verified_build_20261113_152948/SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+    "models/Original_Softmax_Final/final_softmax_model.joblib": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+    "dataset/SET50_constituents_by_halfyear_2016_2026.csv": "17002a2e63259c8144589df02bcfa9c82be1ba6285e5e142e63281779b23ddac",
+    "dataset/set50_declare_dates_2016_2026.csv": "533624ed430850eb0e5c536ac9a5c949fe12342bf6ef2267df716f1a5488956f",
+    "backtest_results/corporate_action_ledger_official.csv": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+    "backtest_results/research_controls/execution_excluded_symbols.csv": "2d10f6ba17cf712d32fc92c05f8dea7c766bb292b2f66bb2410fc4693878df11",
+    "backtest_results/research_gate_checklist.csv": "0033df19e7f4c5e0f2141daed9c11e517974339e7d6373601b7579ce12a97c1f",
+    "backtest_results/execution_data_lineage.json": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "backtest_results/verified_execution_data_status.json": "3ece2ea61de8d6d5b5a538c6107f15dc654b2b803b4f0fdd1b1f392787aadb10",
+    "backtest_results/phase_C_vendor_validation_20261116/phase_C_manifest.json": "932de896d8200e9e0682af287e41a3b7d6acb23e28ff472dbe3222df6c1cf45b",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_manifest.json": "00e7da9beabf3c722ae7decde43d6304fb627ff9e9ef2241735ad7dfbd524b9e",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_gate.csv": "82df117b7b2483729fbf2876fbcb6d75da61ab136d23d88d3f038898eccac958",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_research_readiness_report.md": "87ec32b0138b32d8e1e5fd2c648f6edbde095dc20b9a3c85ff44b063107d23b1",
+    "backtest_results/phase_C_vendor_validation_20261116/sources/SET50_100_H1_2026.pdf": "9e07244ef3aca2929100a36c2e9c2384533624a22560f6149dc23201cd3f1699",
+    "backtest_results/phase_C_vendor_validation_20261116/sources/SET50-SET100-H2-2026.pdf": "a9bff8e6a2fd1e86d2449c1f3eaac534053aecfb74b9649f5626e000d10f7eb2"
+  },
+  "output_sha256": {
+    "readiness_reassessment_report.md": "263478bf13d37f9444eee06ba76f2670554e607fac746821da9b564bccfcac4e",
+    "blocker_status_matrix.csv": "05833a3897eebebceb08eabdf974f2326e32aec246ef39825bc7eb5f6191f90d",
+    "evidence_inventory.csv": "75fe168bb3d181293b169adc608db2011c6a6bf41d044ff6dcadfdbb8e0737e9",
+    "unresolved_risks.md": "0e075807b673608783eac621151bbc03e8fb5642f9f5fa52aaaeb076326c0b77",
+    "decision_required.md": "46738d230c0d4475f2c361102f0bfeef44dae30e7d284380e81801e08b0712bc",
+    "validation_report.md": "0e8c1d7a8b01c220dd3fd95ca1a6a90a802dea2ad007ae5ae3a88e6c57783a7b"
+  },
+  "actions": {
+    "internet_used": false,
+    "market_data_downloaded": false,
+    "yfinance_called": false,
+    "historical_backtests_executed": 0,
+    "63_combinations_executed": false,
+    "model_retrained": false,
+    "synthetic_data_created": false,
+    "notebook_05_or_06_modified": false,
+    "source_data_or_execution_snapshot_modified": false,
+    "existing_phase_A_through_E_artifacts_modified": false,
+    "gate_overridden_or_opened": false,
+    "phase_F_started": false
+  },
+  "manifest_hash_note": "Manifest does not embed its own SHA-256; output_sha256 covers all six deliverables other than this manifest."
+}

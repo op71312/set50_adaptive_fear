@@ -1,0 +1,341 @@
+{
+  "schema_version": "revised-research-backtest-manifest-v1",
+  "audit_id": "revised_research_audit_20261116T031343Z_01b34b3d",
+  "created_at_utc": "2026-11-16T03:13:43.412694+00:00",
+  "project_root": "D:\\Project_Github\\set_fear_index",
+  "run_directory": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d",
+  "validation_only": true,
+  "backtest_gate_open": false,
+  "ready_for_63_combinations": false,
+  "backtest_63_combinations_run": false,
+  "strategy_result_files_created": false,
+  "yfinance_redownload_performed": false,
+  "original_execution_snapshot_modified": false,
+  "frozen_model_retrained_or_modified": false,
+  "research_exclusion_policy": {
+    "canonical_policy_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\research_controls\\execution_excluded_symbols.csv",
+    "output_policy_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_excluded_symbols.csv",
+    "sha256": "47ab83238dbd9d0caac3fac2bea781fe2818dc8080fbd98a1fb442da9936fa1f",
+    "approved_symbols": [
+      "BANPU"
+    ],
+    "exclusion_start_date": "2026-01-01",
+    "exclusion_end_date": "2026-12-31"
+  },
+  "snapshot_integrity": {
+    "pinned_sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "original_before": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "original_after": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "immutable_copy_before": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "immutable_copy_after": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "match": true
+  },
+  "protected_source_hashes_before_and_after": {
+    "execution_snapshot": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet",
+        "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet",
+        "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a"
+      }
+    },
+    "immutable_execution_snapshot_copy": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_original.parquet",
+        "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_original.parquet",
+        "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a"
+      }
+    },
+    "original_master_dataset": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset.parquet",
+        "sha256": "ef060baedd779a99b83a7cfa74b4bde20eb7bcf30fc1c05679f11b3c8c459f07"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset.parquet",
+        "sha256": "ef060baedd779a99b83a7cfa74b4bde20eb7bcf30fc1c05679f11b3c8c459f07"
+      }
+    },
+    "modeling_master_dataset": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet",
+        "sha256": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet",
+        "sha256": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505"
+      }
+    },
+    "sorted_master_dataset": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted.parquet",
+        "sha256": "1ceef21d118c480ffe356e9604e9b2452dd20c5ba91537c40ef5a3e639c9d848"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted.parquet",
+        "sha256": "1ceef21d118c480ffe356e9604e9b2452dd20c5ba91537c40ef5a3e639c9d848"
+      }
+    },
+    "frozen_softmax_model": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_model.joblib",
+        "sha256": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_model.joblib",
+        "sha256": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7"
+      }
+    },
+    "frozen_model_metadata": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_metadata.json",
+        "sha256": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_metadata.json",
+        "sha256": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be"
+      }
+    },
+    "original_test_evaluation": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_test_2026.json",
+        "sha256": "2384c92df4635cbaebbca9d8097651ec05595255ba691da3ab8852ecba16ec2c"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_test_2026.json",
+        "sha256": "2384c92df4635cbaebbca9d8097651ec05595255ba691da3ab8852ecba16ec2c"
+      }
+    },
+    "original_05_backtest_notebook": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\05_backtest.ipynb",
+        "sha256": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\05_backtest.ipynb",
+        "sha256": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41"
+      }
+    },
+    "original_prediction_audit": {
+      "before": {
+        "path": "D:\\Project_Github\\set_fear_index\\backtest_results\\superseded_20261115_pre_integrity_fixes\\daily_predictions_audit.csv",
+        "sha256": "6f8ee45ffeba1325e715c7a30c5bab3fcab1e54c321bbde91fff39702e28d657"
+      },
+      "after": {
+        "path": "D:\\Project_Github\\set_fear_index\\backtest_results\\superseded_20261115_pre_integrity_fixes\\daily_predictions_audit.csv",
+        "sha256": "6f8ee45ffeba1325e715c7a30c5bab3fcab1e54c321bbde91fff39702e28d657"
+      }
+    }
+  },
+  "notebook_06_sha256_after_policy_update": "b99dd4f2a1ce20089b1050f98544acf0c6eb718bb9a730c0a2ea6df0106b09bd",
+  "acquisition_provenance": {
+    "provider": "Yahoo Finance via yfinance.download",
+    "yfinance_version": "1.8.0",
+    "auto_adjust": false,
+    "actions": true,
+    "start": "2026-01-05",
+    "end_exclusive": "2026-11-14",
+    "tickers_requested_count": 83,
+    "tickers_returned_count": 83,
+    "interval": "UNKNOWN",
+    "group_by": "UNKNOWN",
+    "requested_ticker_list": "UNKNOWN"
+  },
+  "universe_counts": {
+    "original_member_union_symbols": 54,
+    "member_date_rows": 10500,
+    "approved_excluded_symbols": 1,
+    "remaining_member_union_symbols": 53,
+    "verified_tradable_symbols": 0,
+    "candidate_ohlc_complete_rows_after_exclusion": 10290,
+    "non_excluded_member_date_rows": 10290,
+    "candidate_ohlc_completeness": 1.0,
+    "verified_execution_rows": 0,
+    "verified_execution_coverage": 0.0,
+    "unresolved_ohlc_cells_after_banpu_exclusion": 0,
+    "unresolved_corporate_action_symbols_in_nonexcluded_members": 51
+  },
+  "gate_status": {
+    "A": "BLOCKED",
+    "B": "BLOCKED",
+    "C": "BLOCKED",
+    "overall": "BLOCKED"
+  },
+  "critical_blockers": [
+    {
+      "Gate": "A — Source Data Integrity",
+      "Check": "Acquisition provenance is complete",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.json | D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_lineage.json",
+      "Verification_Result": "provider=Yahoo Finance via yfinance.download; auto_adjust=False; actions=True; interval=UNKNOWN; group_by=UNKNOWN; requested_ticker_list=UNKNOWN."
+    },
+    {
+      "Gate": "A — Source Data Integrity",
+      "Check": "Execution source is official or authorized",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\verified_execution_data_status.json",
+      "Verification_Result": "Yahoo candidate is not exchange-authorized; verified dataset and official patch are absent."
+    },
+    {
+      "Gate": "B — Eligible Universe Integrity",
+      "Check": "Verified execution coverage for remaining members",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_eligible_data_audit.csv | D:\\Project_Github\\set_fear_index\\backtest_results\\verified_execution_data_status.json",
+      "Verification_Result": "0/10290 rows satisfy the full source authorization, price and action criteria (0.00%); no verified source."
+    },
+    {
+      "Gate": "B — Eligible Universe Integrity",
+      "Check": "Corporate action and identity basis for remaining members",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_ledger_official.csv | D:\\Project_Github\\set_fear_index\\backtest_results\\security_identity_mapping.csv",
+      "Verification_Result": "51 of 53 non-excluded member symbols have unresolved vendor-action rows; no full official negative/positive action ledger."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "No lookahead and six-feature input lineage",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb | D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet",
+      "Verification_Result": "Feature-only/unit future-row tests pass, but full point-in-time feature provenance and validated execution calendar are not established."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "Portfolio accounting and corporate action reconciliation",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_ledger_official.csv",
+      "Verification_Result": "Synthetic accounting tests pass, but 141 ledger rows are not officially reconciled or applied by the portfolio engine."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "All seven allocation methods implemented and reviewed",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "Only EW and IV are implemented; ERC, HRP, MinVar, CVaR and MPT are not ready."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "CVaR formulation and no-all-cash constraint",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "Objective/constraints have not been approved."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "Board lot, stale valuation, covariance and fallback policies",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "At least one required policy remains unset; none inferred or defaulted."
+    }
+  ],
+  "regression_results": {
+    "snapshot_hash_matches_pinned": true,
+    "immutable_copy_hash_matches_pinned": true,
+    "protected_source_hashes_unchanged": true,
+    "banpu_never_tradable": true,
+    "no_excluded_symbol_in_tradable_universe": true,
+    "candidate_ohlc_missing_cells_after_exclusion": 0,
+    "notebook_exclusion_regression_tests_passed": true,
+    "synthetic_tests_passed": 17,
+    "synthetic_tests_failed": 0,
+    "no_price_fill_or_edit": true,
+    "no_yahoo_download": true,
+    "no_backtest_run": true
+  },
+  "source_files": {
+    "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_original.parquet": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+    "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset.parquet": "ef060baedd779a99b83a7cfa74b4bde20eb7bcf30fc1c05679f11b3c8c459f07",
+    "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted.parquet": "1ceef21d118c480ffe356e9604e9b2452dd20c5ba91537c40ef5a3e639c9d848",
+    "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.json": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_lineage.json": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "D:\\Project_Github\\set_fear_index\\dataset\\SET50_constituents_2016_2026.csv": "25706f2b5545e60eb429a5583626e22a9baebf1ae200971ac530c83156e7a723",
+    "D:\\Project_Github\\set_fear_index\\dataset\\set50_declare_dates_2016_2026.csv": "533624ed430850eb0e5c536ac9a5c949fe12342bf6ef2267df716f1a5488956f",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_ledger_official.csv": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_vendor_events.csv": "b57ab721add1546e97bc8e45f1a8e8813838412f742da8674e79444562725afc",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\global_tick_basis_diagnostic.csv": "5c8cbf18f3647cc5482db32028a4310e345e86596aa51f16b7e5ed8728fe151a",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\security_identity_mapping.csv": "ace78e9e3ecab624150229dd3ae6d6437bc7211d034d4742076934d090da26c7",
+    "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_model.joblib": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+    "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_metadata.json": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be",
+    "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_test_2026.json": "2384c92df4635cbaebbca9d8097651ec05595255ba691da3ab8852ecba16ec2c",
+    "D:\\Project_Github\\set_fear_index\\05_backtest.ipynb": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41",
+    "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb": "b99dd4f2a1ce20089b1050f98544acf0c6eb718bb9a730c0a2ea6df0106b09bd",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\superseded_20261115_pre_integrity_fixes\\daily_predictions_audit.csv": "6f8ee45ffeba1325e715c7a30c5bab3fcab1e54c321bbde91fff39702e28d657",
+    "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_data_phase1_report.md": "c7dc8cf26a09f18a19b32f64af5e0f0e1c48a2f17423fea879afd43e160a47aa"
+  },
+  "output_hashes": {
+    "execution_excluded_symbols.csv": "47ab83238dbd9d0caac3fac2bea781fe2818dc8080fbd98a1fb442da9936fa1f",
+    "tradable_universe_2026.csv": "1d1c504434975a7aaddfdea29df0b4a19968341281c8643653cadae983f011dd",
+    "execution_eligible_data_audit.csv": "d7917b1222a9db13c45a431b17adb5a043186c3062d3af0acaf2bb47e378dfb9",
+    "execution_missing_reconciliation.csv": "fef923b34ea4ea21073e3fb351160034031521e0e73d5c968ab67caf4a438b48",
+    "research_data_limitations.md": "ee9f57f5736bc69c5c10e53da9b32b1327a5da69d62eb9fff164d7163733b031",
+    "revised_research_audit.csv": "e4c35a3a818fc7eb23fa0b0aa277398aaad3efdac10256e49011700c6915fd68",
+    "revised_backtest_gate.json": "81759945a0c8d5d16028640627a240e34418d970bbae2f783d50555ca494bd12",
+    "revised_research_audit_report.md": "290466e086266cb60bc06eaee7676c91ae1871ff832ae153f32fcd9187c18e70"
+  },
+  "outputs": {
+    "execution_excluded_symbols.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_excluded_symbols.csv",
+    "tradable_universe_2026.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\tradable_universe_2026.csv",
+    "execution_eligible_data_audit.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_eligible_data_audit.csv",
+    "execution_missing_reconciliation.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_missing_reconciliation.csv",
+    "research_data_limitations.md": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\research_data_limitations.md",
+    "revised_research_audit.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_research_audit.csv",
+    "revised_research_audit_report.md": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_research_audit_report.md",
+    "revised_backtest_gate.json": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_backtest_gate.json"
+  },
+  "research_limitations_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\research_data_limitations.md",
+  "audit_csv_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_research_audit.csv",
+  "gate_json_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_backtest_gate.json",
+  "report_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_research_audit_report.md",
+  "notebook_runtime_validation": {
+    "python": "3.11.12",
+    "all_code_cells_syntax_compiled": true,
+    "code_cells_executed": [
+      3,
+      5,
+      7,
+      9,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "gate_or_audit_writer_cell_executed": false,
+    "63_combination_runner_invoked": false,
+    "tests_passed": 17,
+    "tests_failed": 0,
+    "test_names": [
+      "approved_exclusion_applies_before_decisions",
+      "t_to_t_plus_1_uses_next_open",
+      "gap_does_not_block_execution",
+      "slippage_and_fee_applied_once",
+      "sell_first_unfilled_sell_no_cash",
+      "hold_quantity_unchanged",
+      "buy_does_not_sell_hold_asset",
+      "cash_share_invariants_and_25pct_cap",
+      "missing_or_untradable_open_no_fill",
+      "raw_close_and_stale_policy",
+      "forced_set50_removal_exit",
+      "point_in_time_membership_events",
+      "unverified_corporate_action_rejected",
+      "prediction_uses_features_only",
+      "no_future_row_in_date_t_prediction",
+      "initial_equity_and_drawdown",
+      "cash_market_value_reconciliation"
+    ],
+    "result": "PASS: 17/17; synthetic mechanics only, not market-data integrity evidence."
+  },
+  "notebook_change_summary": [
+    "Removed the appended ad-hoc yfinance download and dependent display cells; no new Yahoo request was made.",
+    "Loaded the frozen BANPU exclusion policy from backtest_results/research_controls before strategy decisions.",
+    "Filtered approved exclusions before signals, allocations, execution lookup, orders and holdings; added defensive assertions.",
+    "Added an exclusion regression test and corrected clean-kernel model/feature evidence extraction."
+  ]
+}

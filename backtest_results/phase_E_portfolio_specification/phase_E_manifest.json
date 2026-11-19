@@ -1,0 +1,158 @@
+{
+  "schema_version": "phase-e-v1",
+  "phase": "Phase E — Portfolio Construction Specification & Execution Policy",
+  "created_date": "2026-11-16",
+  "workspace": "backtest_results/phase_E_portfolio_specification",
+  "scope": "Specification, local evidence review, and in-memory synthetic formula checks only",
+  "actions": {
+    "historical_backtests_executed": 0,
+    "portfolio_63_combinations_executed": false,
+    "yfinance_or_market_data_downloaded": false,
+    "frozen_model_fit_or_retrained": false,
+    "source_dataset_modified": false,
+    "notebook_05_modified": false,
+    "notebook_06_modified": false,
+    "phase_A_through_D_outputs_modified": false,
+    "research_backtest_gate_opened": false,
+    "phase_F_started": false
+  },
+  "phase_D_baseline": {
+    "candidate_symbols": [
+      "AOT"
+    ],
+    "candidate_member_date_rows": 4,
+    "single_security_diagnostic": "PASS_WITH_LIMITATIONS",
+    "multi_security_readiness": "BLOCKED",
+    "seven_allocation_readiness": "BLOCKED",
+    "63_combination_readiness": "BLOCKED",
+    "corporate_action_ledger_events_unresolved": 141,
+    "research_backtest_gate": "BLOCKED"
+  },
+  "preserved_constraints": [
+    "No changes to frozen model, source datasets, Notebook 05, or Phase A-D outputs",
+    "No downloaded data and no yfinance call",
+    "No missing-price or missing-return zero fill",
+    "No corporate action applied without verified terms",
+    "No automatic fallback allocator selected",
+    "No readiness gate bypass or Phase F execution"
+  ],
+  "researcher_approval_required": [
+    "E-001: Verified effective-dated historical board-lot schedule and sizing evidence",
+    "E-002: Odd-lot scope and holding/exit treatment",
+    "Risk-free Rate definition for Sharpe reporting (not approved by E-004)",
+    "MAR definition for Sortino reporting (not approved by E-004)"
+  ],
+  "input_hashes_sha256": {
+    "05_backtest.ipynb": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41",
+    "06_research_backtest.ipynb": "4b390d06306f74bd9360768fa2ce9ac86a86429fcf6cac66f1bc7800748a1a1c",
+    "dataset/verified_build_20261113_152948/SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "backtest_results/execution_data_v2/execution_ohlcv_original.parquet": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "dataset/verified_build_20261113_152948/SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+    "models/Original_Softmax_Final/final_softmax_model.joblib": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+    "dataset/SET50_constituents_by_halfyear_2016_2026.csv": "17002a2e63259c8144589df02bcfa9c82be1ba6285e5e142e63281779b23ddac",
+    "dataset/set50_declare_dates_2016_2026.csv": "533624ed430850eb0e5c536ac9a5c949fe12342bf6ef2267df716f1a5488956f",
+    "backtest_results/corporate_action_ledger_official.csv": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+    "backtest_results/research_controls/execution_excluded_symbols.csv": "2d10f6ba17cf712d32fc92c05f8dea7c766bb292b2f66bb2410fc4693878df11",
+    "backtest_results/research_gate_checklist.csv": "0033df19e7f4c5e0f2141daed9c11e517974339e7d6373601b7579ce12a97c1f",
+    "backtest_results/execution_data_lineage.json": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "backtest_results/phase_C_vendor_validation_20261116/phase_C_manifest.json": "932de896d8200e9e0682af287e41a3b7d6acb23e28ff472dbe3222df6c1cf45b",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_manifest.json": "00e7da9beabf3c722ae7decde43d6304fb627ff9e9ef2241735ad7dfbd524b9e",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_gate.csv": "82df117b7b2483729fbf2876fbcb6d75da61ab136d23d88d3f038898eccac958",
+    "backtest_results/phase_D_universe_consistency_20261116/phase_D_research_readiness_report.md": "87ec32b0138b32d8e1e5fd2c648f6edbde095dc20b9a3c85ff44b063107d23b1"
+  },
+  "integrity_checks": {
+    "protected_source_hashes_match_phase_D": true,
+    "phase_A_through_D_outputs_preserved": true,
+    "notebook_05_hash_matches_phase_D_baseline": true,
+    "notebook_06_hash_matches_phase_D_baseline": true,
+    "research_backtest_gate_remains_blocked": true,
+    "decision_register_rows_validated": 30,
+    "decision_status_counts": {
+      "APPROVED": 21,
+      "APPROVED_EXISTING": 4,
+      "NEEDS_RESEARCHER_APPROVAL": 1,
+      "BLOCKED": 3,
+      "VERIFIED": 1
+    },
+    "protected_input_hashes_verified": "16/16 MATCH",
+    "researcher_decisions_E005_E020_approved": true,
+    "synthetic_formula_checks": "PASS 19/19, FAIL 0, performed before the 2026-11-17 E-004/E-029 recording; verified-session stale age/reset and age-4 unavailability; portfolio-wide unavailable state; no carried-mark returns or gap bridging; segment elapsed time (the suite does not test the subsequently approved 252-interval threshold); full-universe common date intersection; missing data without imputation/security removal; EW and full 60/252 windows; centered covariance/sample correlation and HRP panel consistency; Ledoit-Wolf exclusion; ERC weight/RC checks and tolerances; MinVar q_max feasibility N=1..5 and SLSQP controls; CVaR 12.6 tail/ties and HiGHS controls; MPT objective/inputs and SLSQP controls; allocation/cash/fee calculations; approval and stop-state checks. Synthetic only, not historical results or portfolio readiness; E-029 identifiers are not implemented.",
+    "research_proxy_v2_E030_recorded": true
+  },
+  "readiness": {
+    "board_lot_policy": "BLOCKED",
+    "valuation_policy": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EVIDENCE",
+    "risk_estimation": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EVIDENCE",
+    "EW": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "IV": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "ERC": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "HRP": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "MinVar": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "CVaR": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "MPT": "APPROVED_SPECIFICATION; BLOCKED_HISTORICAL_EXECUTION",
+    "multi_security_portfolio": "BLOCKED",
+    "63_combination_backtest": "BLOCKED",
+    "phase_F": "DO_NOT_BEGIN"
+  },
+  "output_hashes_sha256": {
+    "E1_board_lot_policy.md": "f4454a4bc3e8249e14ec8be1811cbe527adcd66cf6befceb2ba764a87da1a80f",
+    "E2_valuation_stale_price_policy.md": "fdfe17bafb150b0b5777bdb569d28c53ec06bc01383ede06f1088aea4eabb121",
+    "E3_risk_estimation_policy.md": "02449126d53eebe2f1ecfa11b695e4e798a9a56204e1913bf94725b7575cc2e5",
+    "E4_allocation_methods_specification.md": "95d8a3d31e0f99ce49087ab25b03ac5d8226173fdedb26847991c244e0fc0353",
+    "E5_cross_method_consistency.md": "5d748e811d6f24c8c4f080736b17f188f75b861de53276d9fded72726d514a50",
+    "phase_E_decision_register.csv": "32ef9e4aa5f76da86d47faabcdce63c1f71cd8ba6b36fa8cd9284f4f6cdd7c92",
+    "phase_E_revision_changelog.md": "28fc39ddb93d8216dd881fce87c3e9add049fc4eb0848b0bc079fed0305e08c4",
+    "phase_E_summary.md": "bd19ee8fabdd38e511b02eaaeb1f1f24e2d16d4f12ead29e752857551b52ed52",
+    "phase_E_validation_report.md": "9c495a9fb83d87bd6fccb1afeaf65f293b316e5c61153040c46b4685c305a4fd"
+  },
+  "manifest_hash_note": "The manifest does not embed its own SHA-256.",
+  "revision": {
+    "description": "Phase E final decisions with scoped Research Proxy v2 CVaR expanding-window exception E-030, recorded 2026-11-18",
+    "revision_changelog": "phase_E_revision_changelog.md",
+    "changed_decisions": [
+      "E-004",
+      "E-005",
+      "E-006",
+      "E-007",
+      "E-008",
+      "E-009",
+      "E-010",
+      "E-011",
+      "E-012",
+      "E-013",
+      "E-014",
+      "E-015",
+      "E-016",
+      "E-017",
+      "E-018",
+      "E-019",
+      "E-020",
+      "E-024",
+      "E-025",
+      "E-026",
+      "E-027",
+      "E-028",
+      "E-029",
+      "E-030"
+    ],
+    "new_formulations": [
+      "MinVar fixed-q_max objective and solver controls; approved specification",
+      "CVaR fixed-q_max objective with fractional 12.6-observation tail and HiGHS controls; approved specification",
+      "Research Proxy v2 CVaR 60-minimum expanding window; all common-complete history through Predictor Date"
+    ],
+    "all_new_proposals_approved": false,
+    "all_researcher_directed_decisions_E005_E020_approved": true,
+    "changelog_sha256": "28fc39ddb93d8216dd881fce87c3e9add049fc4eb0848b0bc079fed0305e08c4"
+  },
+  "supplemental_revision_E030": {
+    "decision_id": "E-030",
+    "scope": "RESEARCH_PROXY_V2 only",
+    "status": "APPROVED",
+    "decision_register_sha256": "32ef9e4aa5f76da86d47faabcdce63c1f71cd8ba6b36fa8cd9284f4f6cdd7c92",
+    "allocation_specification_sha256": "95d8a3d31e0f99ce49087ab25b03ac5d8226173fdedb26847991c244e0fc0353",
+    "revision_changelog_sha256": "28fc39ddb93d8216dd881fce87c3e9add049fc4eb0848b0bc079fed0305e08c4",
+    "canonical_historical_gate_changed": false,
+    "execution_validation_gate_changed": false,
+    "phase_F_started": false
+  }
+}

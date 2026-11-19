@@ -1,0 +1,30 @@
+﻿Claim,Evidence_File,Evidence_Type,Evidence_Location,Verification_Status,Limitation
+Pipeline design and saved cells,01_dataset.ipynb; 02_eda_parquet.ipynb; 03_feature_engineering.ipynb; 04_model.ipynb,Executed notebook source/output,Cells noted in Master Technical Report,LIMITED,Saved cells do not pin all execution-time input bytes.
+Master dataset shape and hash,dataset/verified_build_20261113_152948/SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet,Parquet file/current hash,"198532 rows, 17 columns, 83 symbols",VERIFIED,Current identity; not exact training table hash.
+Feature Master schema summary,dataset/verified_build_20261113_152948/Report4_Final_Dataset_Summary.csv,Build report,"198532 rows, date span, unavailable expected symbols",VERIFIED,Report scope is this build.
+Input integrity,dataset/verified_build_20261113_152948/Report1_Historical_Data_Integrity.csv,Data-quality report,"83 symbols, 205152 source rows",LIMITED,Vendor diagnostics are not exchange validation.
+Rank quality,dataset/verified_build_20261113_152948/Report2_Rank_Quality_By_Period.csv; Report3_Rank_Consistency.csv,Build audit,2017_H1 and rank consistency rows,LIMITED,Missing member histories remain.
+2026 official membership scope,backtest_results/phase_C_vendor_validation_20261116/membership_2026_primary_evidence_audit.csv,Primary-source audit,H1/H2 50/50,LIMITED,Does not verify execution/calendar.
+Historical membership blocker,backtest_results/phase_D_universe_consistency_20261116/phase_D_research_readiness_report.md,Readiness report,2017_H1 and 720 missing rows,BLOCKED,Requires primary evidence.
+Frozen model identity,models/Original_Softmax_Final/final_softmax_model.joblib; final_softmax_metadata.json,Model artifact and metadata,"SHA, algorithm, features, parameters, sample counts",VERIFIED,Current local artifact only.
+Model 2026 test metrics,models/Original_Softmax_Final/final_test_2026.json,Saved evaluation report,"Accuracy, F1, balanced accuracy, log loss, classes",VERIFIED,Not independent re-evaluation in this task.
+Training dataset identity,backtest_results/training_model_lineage_audit/training_dataset_identity_report.md,Lineage audit,Candidate row counts and absent dataset hash,LIMITED,Exact training table NOT_VERIFIABLE.
+Archived model linkage,backtest_results/training_model_lineage_audit/frozen_model_identity_report.md,Lineage audit,49-row discrepancy and missing hash linkage,NOT_VERIFIABLE,Archive model association unresolved.
+Portfolio method policies,backtest_results/phase_E_portfolio_specification/phase_E_decision_register.csv,Decision register,E-001?E-030,VERIFIED,Policy approval is not market-data validation.
+RPR2 E-030 implementation audit,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/cvar_risk_window_audit.csv,Run audit CSV,"539 valid, 2 not evaluated, 60 min",LIMITED,Scope only RPR2.
+RPR2 run identity and gates,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/run_manifest.json,Run manifest,"Run ID, gates, input hashes, statuses",LIMITED,Notebook08 hash differs current copies.
+RPR2 full performance table,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/performance_summary_63.csv,Existing result CSV,63 combinations and metrics,LIMITED,Research Proxy only.
+RPR2 transactions,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/transactions.csv,Existing result CSV,Filled/NO_FILL/BLOCKED rows and cost parts,LIMITED,Theoretical vendor-price fills.
+RPR2 daily accounting,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/daily_portfolio.csv,Existing result CSV,"Cash, market value, equity per combination",LIMITED,Arithmetic does not prove execution validity.
+RPR2 action provenance,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/strategy_action_log.csv,Existing result CSV,Action log rows and strategy keys,LIMITED,Actions are still proxy output.
+RPR2 check suite,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/synthetic_regression_tests.csv,Synthetic tests,21 PASS,LIMITED,Synthetic behavior only.
+RPR2 baseline vs second run distinction,Both RPR2 run_manifest.json files,Run manifests,Distinct Run ID and Prediction Snapshot ID,VERIFIED,Do not combine runs.
+Legacy archive status,backtest_results/archived_backtest_lineage_audit/archived_results_research_status.md,Archive audit,Superseded and not validated,VERIFIED,Historical outputs remain unverified.
+Phase C readiness,backtest_results/phase_C_vendor_validation_20261116/phase_C_research_readiness_report.md,Readiness report,AOT single-security/four-row diagnostic,VERIFIED,Not multi-security readiness.
+Phase D readiness,backtest_results/phase_D_universe_consistency_20261116/phase_D_research_readiness_report.md,Readiness report,0 verified rows and gate blocked,VERIFIED,Phase D diagnostic only.
+Consolidated historical gate,backtest_results/research_backtest_readiness_consolidation/readiness_consolidation_summary.md,Consolidation report,Canonical gate blocked and Phase F stop,VERIFIED,Run-scoped proxy gate is separate.
+Notebook 07 implementation tests,backtest_results/notebook_07_implementation_verification/notebook_07_implementation_verification_summary.md,Implementation review,37 synthetic passes,LIMITED,Not historical validation.
+Historical RPR reconciliation,backtest_results/notebook_08_research_proxy/RPR-829A43493C6B4CADACEC3ED50621C407/targeted_reconciliation/TARGETED_RECONCILIATION_REPORT.md,Output-only reconciliation,Earlier run cost/equity checks with limitations,LIMITED,Different Run ID; not used for RPR2 metrics.
+Current root Notebook 08 hash,08_set50_real_data_backtest_runner.ipynb,Current file hash,101d165...,VERIFIED,Does not match RPR2-2DF manifest hash.
+Run source hash gap,RPR2 baseline manifest and current Notebook 08 files,Hash comparison,Recorded 0dc604... vs current copies,NOT_VERIFIABLE,Exact source copy absent.
+Local Git history depth,.git log,Repository history,One initial commit,LIMITED,Cannot reconstruct full chronology from commits.

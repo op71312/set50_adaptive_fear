@@ -1,0 +1,20 @@
+# Notebook 08 Research Proxy Run Summary
+
+- Run ID: `RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565`
+- Run-level research gate: `CONDITIONAL_OPEN`
+- Execution validation gate: `BLOCKED`
+- Canonical historical gate: `BLOCKED` (unchanged)
+- Phase F: `DO_NOT_BEGIN`
+- Research universe: 53 union symbols; active H1/H2 sizes {'2026_H1': 49, '2026_H2': 49}
+- Excluded symbols: BANPU, GLOBAL
+- Observed vendor sessions: 210 (2026-01-05 through 2026-11-13)
+- Prediction rows: 7301; non-finite rows rejected before inference: 0
+- Combination records: 63; statuses: `{'COMPLETED_WITH_LIMITATIONS': 63}`
+- Synthetic regression tests: 21; statuses: `{'PASS': 21}`
+- Action log rows: 460045; position valuation rows include Strategy_ID and Allocation_Method.
+- Allocation failures retain cash and are counted; no alternate method is substituted.
+- Metrics are unannualized PRICE_RETURN. Unverified distributions/actions are not applied.
+- Fills are theoretical fractional-share simulations using vendor raw Open, not exchange fills.
+- Notebook 07 and protected source files were hash-checked before and after the run.
+
+See `combination_status_63.csv` for every strategy/method record.

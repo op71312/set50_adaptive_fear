@@ -1,0 +1,87 @@
+{
+  "schema_version": "revised-research-backtest-gate-v1",
+  "audit_id": "revised_research_audit_20261116T031343Z_01b34b3d",
+  "created_at_utc": "2026-11-16T03:13:43.412694+00:00",
+  "Gate_A_Source_Data_Integrity": "BLOCKED",
+  "Gate_B_Eligible_Universe_Integrity": "BLOCKED",
+  "Gate_C_Research_Backtest_Integrity": "BLOCKED",
+  "backtest_gate_open": false,
+  "gate_decision": "BLOCKED",
+  "ready_status": "BLOCKED",
+  "exclusion_policy_frozen": true,
+  "research_limitations_created": true,
+  "unresolved_critical_issues": [
+    {
+      "Gate": "A — Source Data Integrity",
+      "Check": "Acquisition provenance is complete",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.json | D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_lineage.json",
+      "Verification_Result": "provider=Yahoo Finance via yfinance.download; auto_adjust=False; actions=True; interval=UNKNOWN; group_by=UNKNOWN; requested_ticker_list=UNKNOWN."
+    },
+    {
+      "Gate": "A — Source Data Integrity",
+      "Check": "Execution source is official or authorized",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\verified_execution_data_status.json",
+      "Verification_Result": "Yahoo candidate is not exchange-authorized; verified dataset and official patch are absent."
+    },
+    {
+      "Gate": "B — Eligible Universe Integrity",
+      "Check": "Verified execution coverage for remaining members",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\execution_eligible_data_audit.csv | D:\\Project_Github\\set_fear_index\\backtest_results\\verified_execution_data_status.json",
+      "Verification_Result": "0/10290 rows satisfy the full source authorization, price and action criteria (0.00%); no verified source."
+    },
+    {
+      "Gate": "B — Eligible Universe Integrity",
+      "Check": "Corporate action and identity basis for remaining members",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_ledger_official.csv | D:\\Project_Github\\set_fear_index\\backtest_results\\security_identity_mapping.csv",
+      "Verification_Result": "51 of 53 non-excluded member symbols have unresolved vendor-action rows; no full official negative/positive action ledger."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "No lookahead and six-feature input lineage",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb | D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Master_Dataset_DateSymbol_Sorted_VolZ_Fixed.parquet",
+      "Verification_Result": "Feature-only/unit future-row tests pass, but full point-in-time feature provenance and validated execution calendar are not established."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "Portfolio accounting and corporate action reconciliation",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\backtest_results\\corporate_action_ledger_official.csv",
+      "Verification_Result": "Synthetic accounting tests pass, but 141 ledger rows are not officially reconciled or applied by the portfolio engine."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "All seven allocation methods implemented and reviewed",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "Only EW and IV are implemented; ERC, HRP, MinVar, CVaR and MPT are not ready."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "CVaR formulation and no-all-cash constraint",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "Objective/constraints have not been approved."
+    },
+    {
+      "Gate": "C — Research Backtest Integrity",
+      "Check": "Board lot, stale valuation, covariance and fallback policies",
+      "Status": "BLOCKED",
+      "Evidence_Path": "D:\\Project_Github\\set_fear_index\\06_research_backtest.ipynb",
+      "Verification_Result": "At least one required policy remains unset; none inferred or defaulted."
+    }
+  ],
+  "backtest_63_combinations_run": false,
+  "criteria_for_opening": {
+    "Gate_B_must_equal_PASS": false,
+    "Gate_C_must_equal_PASS": false,
+    "no_unresolved_critical_issues": false,
+    "exclusion_list_frozen_before_backtest": true,
+    "research_limitations_created_and_reviewed": true
+  },
+  "evidence_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\revised_research_audit_20261116T031343Z_01b34b3d\\revised_research_audit.csv"
+}

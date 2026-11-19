@@ -1,0 +1,15 @@
+Test,Status,Detail
+t_to_t_plus_1_uses_next_open,PASS,synthetic fixture assertion passed
+gap_does_not_block_execution,PASS,synthetic fixture assertion passed
+slippage_and_fee_applied_once,PASS,synthetic fixture assertion passed
+sell_first_unfilled_sell_no_cash,PASS,synthetic fixture assertion passed
+hold_quantity_unchanged,PASS,synthetic fixture assertion passed
+buy_does_not_sell_hold_asset,PASS,synthetic fixture assertion passed
+cash_share_invariants_and_25pct_cap,PASS,synthetic fixture assertion passed
+missing_or_untradable_open_no_fill,PASS,synthetic fixture assertion passed
+raw_close_and_stale_policy,PASS,synthetic fixture assertion passed
+forced_set50_removal_exit,PASS,synthetic fixture assertion passed
+unverified_corporate_action_rejected,FAIL,unverified Corporate Action ledger ต้องถูกปฏิเสธ
+prediction_uses_features_only,PASS,synthetic fixture assertion passed
+no_future_row_in_date_t_prediction,PASS,synthetic fixture assertion passed
+initial_equity_and_drawdown,PASS,synthetic fixture assertion passed

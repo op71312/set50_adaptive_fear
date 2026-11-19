@@ -1,0 +1,17 @@
+Reference_ID,Artifact,Purpose,GLOBAL_Data_Reachable,Candidate_Direct_Reference,Candidate_Indirect_Derivation,Execution_Evidence,Lineage_Status,Limitation
+R01,"05_backtest.ipynb cell 20, exec 139",Apply GLOBAL 28/27 before 2026-02-24; create candidate and lineage,YES,YES,YES,Saved output,CONFIRMED_CANDIDATE_CREATION,Official source absent; correctness unverified.
+R02,"05_backtest.ipynb cell 21, exec 140",Load candidate; derive eligibility and execution returns,YES,YES,YES,Saved output,CONFIRMED_DIAGNOSTIC_INPUT,Not proof of portfolio-result use.
+R03,"05_backtest.ipynb cell 22, exec 141",Tick/execution-quality diagnostics,YES,YES,YES,Saved output,CONFIRMED_DIAGNOSTIC_CONSUMPTION,Diagnostic use only.
+R04,global_tick_basis_diagnostic.csv,Candidate-derived GLOBAL diagnostic,YES,NO,YES,Output exists,CONFIRMED_DERIVATION,Not a portfolio result.
+R05,execution_price_tick_audit.csv / global_set_recent_crosscheck.csv,Related diagnostics,YES,NO,POSSIBLE,Files exist,DIAGNOSTIC_ONLY,Tick audit has zero data rows; recent dates are after boundary.
+R06,execution_data_lineage.json,Record candidate transformation/source and non-verification,YES,YES,N/A,Metadata exists,CANDIDATE_PROVENANCE_RECORD,Provenance is not official market evidence.
+R07,backtest_run_status.json / research_gate_checklist.csv,Current gate/run status,YES,YES,YES,Status files,CURRENT_RUN_BLOCKED,No new strategy results; no verified execution data.
+R08,05_backtest.ipynb allocator/backtest functions,Static execution_returns path into risk/allocation code,YES,YES,YES,Static code only,POTENTIAL_DOWNSTREAM_PATH,Does not establish function invocation in saved current run.
+R09,05_backtest.ipynb saved cell 53,Current-run 63-combination outcome,YES,NO,NO,Saved output says skipped,NO_NEW_63_RUNS_EVIDENCED,Does not negate older archived results.
+R10,"06_research_backtest.ipynb cell 7, exec 16",Notebook 06 execution input,YES,NO,NO,Saved output loads original,ORIGINAL_SNAPSHOT_LOADED,Limited to inspected saved cell.
+R11,06_research_backtest.ipynb prediction function,Prediction API takes features and frozen model,YES,NO,NO_IDENTIFIED,Static code,NO_DIRECT_PREDICTION_PATH_FOUND,Not a complete provenance chain.
+R12,03_feature_engineering.ipynb / modeling Master,Feature pipeline and feature data,YES,NO,NO_IDENTIFIED,Static code + data hash,NO_CANDIDATE_PATH_FOUND,Complete feature-build manifest absent.
+R13,04_model.ipynb / frozen metadata,Model training and feature input provenance,YES,NO,NO_IDENTIFIED,Static code + model hashes,NO_CANDIDATE_PATH_FOUND,Training dataset hash absent in metadata.
+R14,superseded archive_manifest.json,Archived prior run source note,YES,NO,POSSIBLE_PRICE_BASIS_OVERLAP,Manifest exists,ARCHIVE_INPUTS_INCOMPLETE,Says adjusted Master OHLC; not proof of exact candidate use.
+R15,Archived summary/daily portfolio results,Existing portfolio results,YES,NO,UNKNOWN,63 summary pairs; 13167 daily rows,UNKNOWN_INSUFFICIENT_EVIDENCE,"Mtimes precede candidate mtime, but no complete input hash chain."
+R16,Archived prediction/valuation/transaction files,Check GLOBAL symbol in outputs,NO_IN_SYMBOL_ROWS,NO,UNKNOWN,"GLOBAL rows: {'predictions': 0, 'valuation': 0, 'transactions': 0}",NO_GLOBAL_RESULT_ROWS_FOUND,Does not rule out upstream influence on other securities.

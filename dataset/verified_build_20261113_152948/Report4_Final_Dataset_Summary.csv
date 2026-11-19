@@ -1,0 +1,2 @@
+﻿Master_File,Rows,Symbols_With_Rows,First_Date,Last_Date,Columns,Expected_But_Unavailable_Symbols,Note
+D:\Project_Github\set_fear_index\dataset\verified_build_20261113_152948\SET50_Master_Dataset.parquet,198532,83,2016-01-04,2026-11-13,"Date,Period,Symbol,Open,High,Low,Close,Volume,daily_return,momentum_20d,vol_z,target,volatility_ret,VolRank,Corr_60d,CorrRank,LiquidityRank","BPP,DTAC,GLOW,INTUCH,MTLS,PS,ROBINS,TMB",Features recalculated from staged OHLCV; source Parquets were not overwritten.

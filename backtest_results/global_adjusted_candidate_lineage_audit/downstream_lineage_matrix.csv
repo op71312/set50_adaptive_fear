@@ -1,0 +1,9 @@
+Source,Intermediate,Target,Candidate_Reachability,Status,Evidence,Limit
+Original execution snapshot,Corrected candidate,Notebook 05 saved cell 20,DIRECT,CONFIRMED,"36 rows, factor 28/27 before 2026-02-24; lineage JSON.",Adjustment unverified.
+Corrected candidate,Eligibility / execution returns,Notebook 05 saved cell 21,DIRECT,CONFIRMED_FOR_DIAGNOSTICS,"Saved output shape (17430,13); 17,332 bars eligible.",Not proof of portfolio use.
+Candidate frame,Tick/execution diagnostics,Notebook 05 saved cell 22 + diagnostic CSV,DIRECT_TO_DERIVED_OUTPUT,CONFIRMED,Saved outputs and candidate-derived diagnostic.,Diagnostics only.
+Candidate,Allocator/backtest functions,Notebook 05 static code,STATIC_POTENTIAL,POTENTIAL_NOT_RUN_IN_CURRENT_SAVED_RUN,Code accepts execution-return data; current status says no new result files.,Static path is not a call trace.
+Candidate,Feature engineering / feature master,Notebook 03,NO_IDENTIFIED_PATH,NO_PATH_FOUND,Separate source OHLCV inputs; no corrected candidate reference found.,Build manifest incomplete.
+Candidate,Model / prediction,"Notebook 04, frozen metadata, Notebook 06",NO_IDENTIFIED_CANDIDATE_PATH,NO_DIRECT_PATH_FOUND,Feature rows and frozen model; Notebook 06 inspected loader reads original snapshot.,Model training input hash missing.
+Candidate,Archived 2026-11-15 result package,Superseded archive,UNKNOWN,UNKNOWN_INSUFFICIENT_EVIDENCE,Archive says adjusted Master OHLC; 63 summary pairs exist; output mtimes precede candidate mtime.,No complete per-run hashes/configuration; timestamp not proof.
+Candidate,Notebook 06 execution input,Notebook 06 saved cell 7,NO_DIRECT_PATH_IN_INSPECTED_CELL,ORIGINAL_SNAPSHOT_LOADED,"Saved output reports original path and shape (17430,10).",Limited to inspected state.

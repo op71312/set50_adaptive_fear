@@ -1,0 +1,12 @@
+Check,Status,Evidence
+Feature snapshot local hash/schema,READY_PROXY,7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505
+Frozen model and exact feature order,READY_PROXY,8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7
+Official 2026 membership,READY_PROXY,"active H1/H2 sizes={'2026_H1': 49, '2026_H2': 49}"
+Research universe after exclusions,READY_PROXY,"union=53; active={'2026_H1': 49, '2026_H2': 49}"
+Yahoo raw Open source,PROXY_ACCEPTED_FOR_RESEARCH,Yahoo Finance via yfinance.download; auto_adjust=False
+Observed calendar; not official SET calendar,PROXY_ACCEPTED_FOR_RESEARCH,210 observed dates 2026-01-05 to 2026-11-13
+60-observation allocation window,READY_PROXY,warmup index=60; common complete=210
+E-030 CVaR minimum 60 / expanding window,READY_PROXY,max observed=210; minimum=60; expanding to all available common-complete prior observations
+Corporate actions/distributions,CONTROLLED_EXCLUSION,No unverified action applied; unverified distributions excluded from PRICE_RETURN.
+Board lots/tradability,PROXY_ACCEPTED_FOR_RESEARCH,Theoretical fractional-share accounting; no exchange-tradability claim.
+Separate run-level gates,CONDITIONAL_OPEN,EXECUTION_VALIDATION_GATE=BLOCKED; canonical=BLOCKED

@@ -1,0 +1,103 @@
+{
+  "schema_version": "research-backtest-audit-v1",
+  "created_at_utc": "2026-11-15T15:00:53.455246+00:00",
+  "run_directory": "D:\\Project_Github\\set_fear_index\\backtest_results\\research_audit_20261115T150052643494Z_190d6d3f",
+  "run_status": "BLOCKED",
+  "backtest_gate_open": false,
+  "backtest_63_sets_executed": false,
+  "strategy_result_files_created": false,
+  "yfinance_redownload_performed": false,
+  "original_snapshot_modified": false,
+  "project_root": "D:\\Project_Github\\set_fear_index",
+  "notebook_source_sha256": "e9f9b8f468e3f1ede68da6ccff36fea9e82a4e962f7b89652db8da38d79b9e97",
+  "model_artifact_path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_model.joblib",
+  "model_artifact_sha256": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+  "model_metadata_path": "D:\\Project_Github\\set_fear_index\\models\\Original_Softmax_Final\\final_softmax_metadata.json",
+  "execution_candidate_path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet",
+  "execution_candidate_sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+  "verified_execution_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_verified_v2.parquet",
+  "source_hashes": {
+    "feature_master": "7424f01e92d4f507b2a5956898e1ef30050de7a50c7c4ee9a9aa402af4271505",
+    "execution_candidate": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "execution_sidecar": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+    "execution_lineage": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "execution_verified_status": "3ece2ea61de8d6d5b5a538c6107f15dc654b2b803b4f0fdd1b1f392787aadb10",
+    "membership": "17002a2e63259c8144589df02bcfa9c82be1ba6285e5e142e63281779b23ddac",
+    "membership_effective_dates": "533624ed430850eb0e5c536ac9a5c949fe12342bf6ef2267df716f1a5488956f",
+    "feature_notebook": "f1fee7bf11ea2796464b7540ff23b121af13d2ba884a6b01cc426b85180592b9",
+    "model_notebook": "1cfb1c83c9b4bcc317d7605c1d717e3e16bc5525aea644f0f38ce2e2a8320782",
+    "frozen_model": "8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7",
+    "model_metadata": "d26da9d09b94ab50dbb803bf33d2670b93aff2c8dbaf14fdb264eac89a1852be",
+    "execution_price_audit": "08bfca3ab18f16921a0d9b617bdab63366386b394b1d7745b5998e88c30ee74a",
+    "immutable_execution_copy": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "global_recent_SET_crosscheck": "f058fc3ac4763d8db264fcb979ed8c3dd3a5704a3b391c41d7d404845a3d08e9",
+    "security_identity_mapping": "ace78e9e3ecab624150229dd3ae6d6437bc7211d034d4742076934d090da26c7",
+    "execution_tick_audit": "12914dcad00228e1a0d3724fdcf7a1e0157b69eacfbd91e5b5753c5aec3f4e21",
+    "execution_tick_original_audit": "a1458e1f72db6b1347676e6493ed3ace2a8fbbf50f857d9c0fa56730d07943b6",
+    "corporate_action_ledger": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+    "vendor_action_inventory": "b57ab721add1546e97bc8e45f1a8e8813838412f742da8674e79444562725afc",
+    "banpu_audit": "877d910c9e2b92eca6f1c0c7957184aff18c0426a88ac0023f51f33a54fb8a96",
+    "global_tick_audit": "5c8cbf18f3647cc5482db32028a4310e345e86596aa51f16b7e5ed8728fe151a",
+    "previous_gate_checklist": "0033df19e7f4c5e0f2141daed9c11e517974339e7d6373601b7579ce12a97c1f",
+    "notebook_05_read_only": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41"
+  },
+  "output_hashes": {
+    "unit_test_report.csv": "f0d45129709397e030bacafcf71af16ac262f4eb9c42873ff3093f2ffcf35ea6",
+    "source_inventory.csv": "37e3cde531b5e3aa4567922503540c3b00fe17d073248f3c3b0dff373f09db1a",
+    "feature_impact_audit.csv": "2f9c76bca18fb27d23f112a4369c2e35ef3872633415bb6fb7367f242bea99c8",
+    "gate_evidence.csv": "0e6c800a654a7cc1ad7ee1856b0f07d30d06dee6a4a831cac5429b0d30dd75f1"
+  },
+  "environment": {
+    "python": "3.11.12 (main, May 22 2025, 01:56:58) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "pandas": "3.1.1",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.1"
+  },
+  "configuration": {
+    "features": [
+      "daily_return",
+      "momentum_20d",
+      "vol_z",
+      "VolRank",
+      "CorrRank",
+      "LiquidityRank"
+    ],
+    "cost_assumptions": {
+      "buy_fee_rate": 0.0016799,
+      "sell_fee_rate": 0.0016799,
+      "slippage_rate": 0.001
+    },
+    "sharpe_daily_risk_free_rate_assumption": 0.0,
+    "execution_lag_sessions": 1,
+    "gap_limit": null,
+    "max_buy_weight_per_stock": 0.25,
+    "board_lot_size": null,
+    "max_stale_calendar_days": null,
+    "covariance_estimator": null,
+    "cvar_formulation": null,
+    "allocator_fallback_policy": null
+  },
+  "unit_test_summary": {
+    "passed": 16,
+    "failed": 0,
+    "report_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\research_audit_20261115T150052643494Z_190d6d3f\\unit_test_report.csv"
+  },
+  "gate_report_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\research_audit_20261115T150052643494Z_190d6d3f\\gate_evidence.csv",
+  "gate_blockers": [
+    "acquisition_manifest_complete: BLOCKED",
+    "execution_source_authorized: BLOCKED",
+    "execution_missing_rows_reconciled: BLOCKED",
+    "corporate_actions_reconciled_and_accounted: BLOCKED",
+    "global_identity_conversion_and_tick_verified: BLOCKED",
+    "banpu_identity_prices_and_features_verified: BLOCKED",
+    "tick_schedule_verified: BLOCKED",
+    "no_lookahead_verified: BLOCKED",
+    "cvar_formulation_approved: BLOCKED",
+    "board_lot_and_fallback_policies_resolved: BLOCKED",
+    "point_in_time_membership_verified: BLOCKED"
+  ],
+  "outputs_are_audit_only": true
+}

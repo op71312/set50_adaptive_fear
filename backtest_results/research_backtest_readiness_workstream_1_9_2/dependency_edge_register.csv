@@ -1,0 +1,128 @@
+﻿Edge_ID,Source_Node,Target_Node,Edge_Type,Rationale,Evidence_Status,Related_Blockers
+M01,SRC_TRAINING_DATA,B-MOD-01,EVIDENCE,Training data identity and cryptographic lineage are required to attribute the frozen model.,IDENTITY_INCOMPLETE,B-MOD-01
+M02,SRC_MEMBERSHIP,B-MEM-01,EVIDENCE,Point-in-time constituent membership is incomplete; missing dates are not inferred.,PARTIALLY_VERIFIED,B-MEM-01
+M03,B-MEM-01,B-MOD-01,EVIDENCE,Model training context depends on correct historical membership.,BLOCKED,B-MEM-01;B-MOD-01
+M04,SRC_FEATURE_PATHWAY,B-FEAT-01,EVIDENCE,"GLOBAL pathway is confirmed, but actual exposure is unknown.",PARTIALLY_VERIFIED,B-FEAT-01
+M05,B-FEAT-01,B-MOD-01,EVIDENCE,Feature exposure must be accounted for before full model attribution.,PARTIALLY_VERIFIED,B-FEAT-01;B-MOD-01
+M06,SRC_MODEL_ARTIFACT,B-MOD-01,PROVENANCE,Artifact identity does not establish training-set or archived-run linkage.,PRESENT_IDENTITY_KNOWN,B-MOD-01
+M07,SRC_MODEL_METADATA,B-MOD-02,EVIDENCE,"Metadata declares 10,436 test samples and must be reconciled to archived predictions.",PRESENT,B-MOD-02
+M08,SRC_ARCHIVED_PREDICTIONS,B-MOD-02,EVIDENCE,"Archived predictions contain 10,387 records per pair; the 49-record difference is unexplained.",PRESENT,B-MOD-02
+M09,B-MOD-01,B-MOD-02,PROVENANCE,The count discrepancy requires attributable model/run context; do not assume truncation or filtering.,BLOCKED,B-MOD-01;B-MOD-02
+M10,B-MOD-01,N_ATTRIBUTABLE_MODEL,PROVENANCE,Complete training-to-artifact chain is a prerequisite for model attribution.,BLOCKED,B-MOD-01
+M11,B-MOD-02,N_PREDICTION_SNAPSHOT,PROVENANCE,Unresolved count discrepancy prevents declaring the snapshot complete and attributable.,PROVENANCE_INCOMPLETE,B-MOD-02
+M12,N_ATTRIBUTABLE_MODEL,N_PREDICTION_SNAPSHOT,PROVENANCE,Prediction snapshot must link to the exact frozen model; no historical linkage inferred.,NOT_ESTABLISHED,B-MOD-01;B-MOD-02
+U01,B-MEM-01,N_PREDICTION_UNIVERSE,EVIDENCE,Dated predictions require correct historical membership context.,BLOCKED,B-MEM-01
+U02,B-UNIV-01,N_PREDICTION_UNIVERSE,EVIDENCE,Do not include securities in a point-in-time prediction universe before eligibility evidence.,BLOCKED,B-UNIV-01
+U03,N_PREDICTION_SNAPSHOT,N_PREDICTION_UNIVERSE,PROVENANCE,Snapshot provenance must be reconciled before using predictions in the dated universe.,PROVENANCE_INCOMPLETE,B-MOD-02;B-UNIV-01
+U04,N_PREDICTION_UNIVERSE,N_DAILY_BUY_UNIVERSE,IMPLEMENTATION,"Daily Buy membership derives from dated predictions and eligibility, not aggregate outputs.",BLOCKED,B-UNIV-01;B-ALLOC-01
+U05,B-ALLOC-01,N_DAILY_BUY_UNIVERSE,EVIDENCE,Archived daily Buy membership is missing; do not reconstruct it.,UNKNOWN_NOT_ARCHIVED,B-ALLOC-01
+I01,SRC_IDENTITY_EVIDENCE,B-ID-01,EVIDENCE,BANPU identity/conversion history needs authoritative evidence; no substitute symbol or terms inferred.,BLOCKED,B-ID-01
+I02,SRC_IDENTITY_EVIDENCE,B-ID-02,EVIDENCE,GLOBAL identity and price basis remain unresolved; diagnostics do not prove an action or correction.,BLOCKED,B-ID-02
+I03,SRC_CORPORATE_ACTION_EVIDENCE,B-CA-01,EVIDENCE,Ledger rows are not primary-source verification; candidate events are not assumed to affect prices/shares.,BLOCKED,B-CA-01
+I04,B-ID-01,N_ID_EVENT_MAPPING,EVIDENCE_CONVERGENCE,Identity evidence contributes to mapping; this is not a strict identity-before-action dependency.,BLOCKED,B-ID-01;B-CA-01
+I05,B-ID-02,N_ID_EVENT_MAPPING,EVIDENCE_CONVERGENCE,GLOBAL identity and basis inform mapping in parallel with corporate-action evidence.,BLOCKED,B-ID-02;B-CA-01
+I06,B-CA-01,N_ID_EVENT_MAPPING,EVIDENCE_CONVERGENCE,Event-specific primary evidence must converge with security identity before applying a verified mapping.,BLOCKED,B-CA-01;B-ID-01;B-ID-02
+I07,N_ID_EVENT_MAPPING,B-UNIV-01,EVIDENCE,Eligibility requires a verified identity/event mapping; neither is backfilled.,BLOCKED,B-ID-01;B-ID-02;B-CA-01;B-UNIV-01
+V01,SRC_VENDOR_SNAPSHOT,B-EX-01,PROVENANCE,"Approach B permits Yahoo/yfinance for research, but request/retrieval lineage remains incomplete.",PARTIALLY_VERIFIED,B-EX-01
+V02,B-EX-01,B-EX-02,EVIDENCE,OHLC quality checks require an identified snapshot and retrievable request parameters.,BLOCKED,B-EX-01;B-EX-02
+V03,B-EX-01,B-EX-03,EVIDENCE,GLOBAL price-basis anomalies need resolved snapshot/request identity.,BLOCKED,B-EX-01;B-EX-03
+V04,B-ID-01,B-EX-02,EVIDENCE,BANPU OHLC interpretation requires verified identity and continuity.,BLOCKED,B-ID-01;B-EX-02
+V05,SRC_CALENDAR,B-CAL-01,EVIDENCE,Calendar alignment requires session evidence; vendor dates are not official SET sessions absent proof.,BLOCKED,B-CAL-01
+V06,B-CAL-01,B-EX-02,EVIDENCE,Missingness and stale-price tests depend on the session set used for comparison.,BLOCKED,B-CAL-01;B-EX-02
+V07,B-ID-02,B-EX-03,EVIDENCE,GLOBAL anomaly interpretation requires verified identity and authorized price basis.,BLOCKED,B-ID-02;B-EX-03
+V08,B-CA-01,B-EX-03,EVIDENCE,Potential corporate-action effects require primary evidence before interpreting price anomalies.,BLOCKED,B-CA-01;B-EX-03
+C01,B-EX-01,B-UNIV-01,EVIDENCE,Eligibility requires traceable execution-price provenance.,BLOCKED,B-EX-01;B-UNIV-01
+C02,B-EX-02,B-UNIV-01,EVIDENCE,"Eligibility requires OHLC completeness, quality and missing/stale behavior checks.",BLOCKED,B-EX-02;B-UNIV-01
+C03,B-EX-03,B-UNIV-01,EVIDENCE,GLOBAL remains excluded until its price-basis anomaly is evidenced and resolved.,BLOCKED,B-EX-03;B-UNIV-01
+C04,B-CAL-01,B-UNIV-01,EVIDENCE,Eligibility and return alignment require a verified calendar.,BLOCKED,B-CAL-01;B-UNIV-01
+C05,B-MEM-01,B-UNIV-01,EVIDENCE,Point-in-time membership prevents survivorship/universe leakage.,BLOCKED,B-MEM-01;B-UNIV-01
+C06,B-FEAT-01,B-UNIV-01,EVIDENCE,Carry feature-pathway limitations; confirmed pathway is not confirmed exposure.,PASS_WITH_LIMITATIONS,B-FEAT-01;B-UNIV-01
+C07,B-ID-01,B-UNIV-01,EVIDENCE,BANPU remains excluded for affected history until identity/continuity is verified.,BLOCKED,B-ID-01;B-UNIV-01
+C08,B-ID-02,B-UNIV-01,EVIDENCE,GLOBAL remains excluded pending verified identity and price basis.,BLOCKED,B-ID-02;B-UNIV-01
+C09,B-CA-01,B-UNIV-01,EVIDENCE,Potential action impacts must be mapped before affected rows can be eligible.,BLOCKED,B-CA-01;B-UNIV-01
+C10,N_ID_EVENT_MAPPING,B-UNIV-01,EVIDENCE_CONVERGENCE,Jointly verified identity/event mapping is required alongside other eligibility evidence.,BLOCKED,B-ID-01;B-ID-02;B-CA-01;B-UNIV-01
+C11,B-UNIV-01,N_ELIGIBLE_UNIVERSE,VALIDATION,"Verified eligible universe is downstream of identity, price, calendar and membership checks.",BLOCKED,B-UNIV-01
+R01,N_DAILY_BUY_UNIVERSE,N_HIST_RISK_INPUTS,EVIDENCE,Risk rows must correspond to the applicable daily Buy Universe.,UNKNOWN_NOT_ARCHIVED,B-ALLOC-01;B-RISK-01
+R02,B-RISK-01,N_HIST_RISK_INPUTS,EVIDENCE,Historical risk-panel inputs and universe are not established.,BLOCKED,B-RISK-01
+R03,N_RISK_SPEC,N_HIST_RISK_INPUTS,IMPLEMENTATION,E3 specifies windows/common-complete rules; it does not supply historical rows.,APPROVED_SPECIFICATION_ONLY,B-RISK-01
+R04,B-CAL-01,N_HIST_RISK_INPUTS,EVIDENCE,Risk windows/returns depend on verified calendar alignment.,BLOCKED,B-CAL-01;B-RISK-01
+R05,N_HIST_RISK_INPUTS,N_RISK_DATA_HASH,PROVENANCE,"Risk_Data_Hash is a separate required panel-provenance value, not an optimizer argument.",REQUIRED; VALUE UNVERIFIED,B-RISK-01;B-RUN-01
+R06,N_HIST_RISK_INPUTS,N_METHOD_IMPLEMENTATION,IMPLEMENTATION,Method execution requires the historically applicable risk inputs.,BLOCKED,B-RISK-01;B-IMPL-01
+R07,N_ALLOCATION_METHOD_SPEC,N_METHOD_IMPLEMENTATION,IMPLEMENTATION,Approved method definitions constrain code but do not prove implementation or historical execution.,APPROVED_SPECIFICATION_ONLY,B-METHOD-01;B-IMPL-01
+R08,B-METHOD-01,N_METHOD_IMPLEMENTATION,IMPLEMENTATION,Only two of seven paths are supported; five are unsupported; historical readiness is 0/7.,BLOCKED,B-METHOD-01;B-IMPL-01
+R09,B-IMPL-01,N_METHOD_IMPLEMENTATION,IMPLEMENTATION,Reusable portfolio implementation and attributable artifacts remain unverified.,BLOCKED,B-IMPL-01
+R10,N_METHOD_IMPLEMENTATION,N_ALLOCATION_SOLVER,IMPLEMENTATION,Attributable solver trace depends on implemented and validated method paths.,BLOCKED,B-METHOD-01;B-IMPL-01
+R11,N_HIST_RISK_INPUTS,N_ALLOCATION_SOLVER,EVIDENCE,Solver output needs the exact historical risk inputs used.,BLOCKED,B-RISK-01;B-ALLOC-01
+R12,B-ALLOC-01,N_ALLOCATION_SOLVER,PROVENANCE,Archived weights/solver traces are missing; no reconstruction is historical evidence.,UNKNOWN_NOT_ARCHIVED,B-ALLOC-01
+R13,D_E005_E020,N_ALLOCATION_SOLVER,IMPLEMENTATION,E-005:E-020 constrain behavior but are not solver execution evidence.,APPROVED_SPECIFICATION_ONLY,B-METHOD-01;B-IMPL-01
+R14,N_ALLOCATION_SOLVER,N_ORDER_SIZING,IMPLEMENTATION,Order sizing depends on attributable weights and validated sizing implementation.,BLOCKED,B-ALLOC-01;B-LOT-01;B-IMPL-01
+L01,B-LOT-01,D_E001,EVIDENCE,E-001 remains blocked pending effective-dated board-lot evidence.,BLOCKED,B-LOT-01
+L02,B-LOT-01,B-DEC-02,EVIDENCE,E-002 must not be resolved by assuming lot units.,BLOCKED,B-LOT-01;B-DEC-02
+L03,B-DEC-02,D_E002,DECISION,Canonical E-002 still needs researcher decision.,NEEDS_RESEARCHER_APPROVAL,B-DEC-02
+L04,B-LOT-01,N_ORDER_SIZING,IMPLEMENTATION,Fail closed until security/date/segment lot schedule is verified; do not assume 100 shares.,BLOCKED,B-LOT-01;B-IMPL-01
+L05,D_E001,N_ORDER_SIZING,IMPLEMENTATION,Sizing depends on resolving E-001 evidence.,BLOCKED,B-LOT-01;B-IMPL-01
+L06,D_E002,N_ORDER_SIZING,DECISION,Odd-lot/residual treatment remains a separate decision.,NEEDS_RESEARCHER_APPROVAL,B-DEC-02
+L07,B-IMPL-01,N_ORDER_SIZING,IMPLEMENTATION,Sizing implementation must be attributable and tested.,BLOCKED,B-IMPL-01
+L08,N_ORDER_SIZING,N_ORDER_EXECUTION,IMPLEMENTATION,Historical execution lineage depends on reproducible quantities and explicit lot/residual handling.,BLOCKED,B-LOT-01;B-DEC-02;B-IMPL-01;B-EXEC-01
+L09,D_E027_E028,N_ORDER_EXECUTION,IMPLEMENTATION,Approved controls are not evidence that historical executions followed them.,APPROVED_SPECIFICATION_ONLY,B-EXEC-01
+L10,B-EXEC-01,N_ORDER_EXECUTION,PROVENANCE,"Historical orders, fills and outcomes are not fully attributable.",BLOCKED,B-EXEC-01
+L11,B-EX-01,N_ORDER_EXECUTION,EVIDENCE,Price-source provenance is required to assess execution inputs.,BLOCKED,B-EX-01;B-EXEC-01
+L12,B-EX-02,N_ORDER_EXECUTION,EVIDENCE,Execution requires verified OHLC completeness and no-fill behavior.,BLOCKED,B-EX-02;B-EXEC-01
+L13,B-EX-03,N_ORDER_EXECUTION,EVIDENCE,GLOBAL execution price basis is not established.,BLOCKED,B-EX-03;B-EXEC-01
+VAL01,N_ORDER_EXECUTION,N_PORTFOLIO_VALUATION,IMPLEMENTATION,Valuation requires attributable fills/positions and complete equity marks.,BLOCKED,B-EXEC-01;B-STALE-01
+VAL02,B-STALE-01,N_PORTFOLIO_VALUATION,VALIDATION,Stale-price and no-fill behavior must be evidenced rather than silently carried/substituted.,BLOCKED,B-STALE-01
+VAL03,B-CAL-01,N_PORTFOLIO_VALUATION,EVIDENCE,Valuation grid requires session alignment and explicit missing/stale handling.,BLOCKED,B-CAL-01;B-STALE-01
+VAL04,B-EX-02,N_PORTFOLIO_VALUATION,EVIDENCE,Missing execution/mark OHLC affects complete equity marks.,BLOCKED,B-EX-02;B-STALE-01
+VAL05,D_E005_E020,N_PORTFOLIO_VALUATION,IMPLEMENTATION,Approved policy informs valuation but does not validate historical implementation.,APPROVED_SPECIFICATION_ONLY,B-STALE-01;B-PERF-01
+PF01,N_ARCHIVED_OUTPUTS,N_ARCHIVE_METRIC_REVIEW,EVIDENCE,Archived outputs remain superseded and unvalidated.,SUPERSEDED_NOT_VALIDATED,B-PERF-01;B-RUN-01
+PF02,N_PORTFOLIO_VALUATION,N_ARCHIVE_METRIC_REVIEW,VALIDATION,Metrics require a verified valuation series with no unexplained gaps/stale marks.,BLOCKED,B-PERF-01;B-STALE-01
+PF03,B-PERF-01,N_ARCHIVE_METRIC_REVIEW,VALIDATION,Archived performance methodology and provenance are incomplete.,BLOCKED,B-PERF-01
+PF04,B-STALE-01,N_ARCHIVE_METRIC_REVIEW,VALIDATION,Unresolved stale marks affect returns and performance summaries.,BLOCKED,B-STALE-01;B-PERF-01
+PF05,B-COST-01,N_ARCHIVE_METRIC_REVIEW,VALIDATION,Fees/slippage must be attributable before net performance claims are validated.,BLOCKED,B-COST-01;B-PERF-01
+PF06,B-EXEC-01,N_ARCHIVE_METRIC_REVIEW,PROVENANCE,Performance cannot be reproduced without attributable execution records.,BLOCKED,B-EXEC-01;B-PERF-01
+PF07,N_SEGMENT_REPORTING,N_ARCHIVE_METRIC_REVIEW,VALIDATION,Metrics must respect valid contiguous segments and the E-004 threshold.,SPECIFICATION_APPROVED_DATA_UNAVAILABLE,B-DEC-04;B-PERF-01
+PF08,N_ARCHIVE_METRIC_REVIEW,N_RISK_ADJUSTED_METRICS,VALIDATION,Risk-adjusted calculation requires a validated underlying performance series.,BLOCKED,B-PERF-01
+PF09,D_RISK_FREE_RATE,N_RISK_ADJUSTED_METRICS,DECISION,Risk-free Rate remains a separate unresolved decision.,NEEDS_RESEARCHER_APPROVAL,B-PERF-01
+PF10,D_MAR,N_RISK_ADJUSTED_METRICS,DECISION,MAR remains a separate unresolved decision.,NEEDS_RESEARCHER_APPROVAL,B-PERF-01
+SEG01,B-DEC-04,D_E004,DECISION,"E-004 Option B is specification-only resolution, not evidence clearance.",RESOLVED_SPECIFICATION_ONLY,B-DEC-04
+SEG02,D_E004,N_SEGMENT_REPORTING,IMPLEMENTATION,Use 252 verified intervals/year; annualize at >=252 valid consecutive one-session returns (253 marks); do not bridge/combine segments.,APPROVED_OPTION_B,B-DEC-04;B-CAL-01;B-STALE-01
+SEG03,B-CAL-01,N_SEGMENT_REPORTING,EVIDENCE,Approved threshold requires verified exchange-session alignment.,BLOCKED,B-CAL-01;B-DEC-04
+SEG04,B-STALE-01,N_SEGMENT_REPORTING,VALIDATION,Valid segment marks depend on resolved missing/stale valuation treatment.,BLOCKED,B-STALE-01;B-DEC-04
+SEG05,B-EX-02,N_SEGMENT_REPORTING,EVIDENCE,"Valid one-session returns require usable, complete price marks.",BLOCKED,B-EX-02;B-DEC-04
+SEG06,D_E005_E020,N_SEGMENT_REPORTING,IMPLEMENTATION,"Other performance definitions remain specifications, not validated historical metrics.",APPROVED_SPECIFICATION_ONLY,B-DEC-04;B-PERF-01
+ARCH01,B-MOD-01,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Historical model/training identity is needed for archived-run attribution.,BLOCKED,B-MOD-01;B-RUN-01
+ARCH02,B-MOD-02,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Prediction count mismatch remains unresolved for historical lineage.,PROVENANCE_INCOMPLETE,B-MOD-02;B-RUN-01
+ARCH03,B-ALLOC-01,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Missing Buy Universe and weights/solver traces prevent historical allocation attribution.,UNKNOWN_NOT_ARCHIVED,B-ALLOC-01;B-RUN-01
+ARCH04,B-RISK-01,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Historical panel inputs and Risk_Data_Hash are not established.,BLOCKED,B-RISK-01;B-RUN-01
+ARCH05,B-EXEC-01,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Historical order/fill lineage is incomplete.,BLOCKED,B-EXEC-01;B-RUN-01
+ARCH06,B-RUN-01,N_ARCHIVE_PROVENANCE_REVIEW,PROVENANCE,Archived run lacks a complete manifest; E-029 must not be retrofitted.,BLOCKED,B-RUN-01
+ARCH07,N_ARCHIVE_PROVENANCE_REVIEW,N_REPRODUCIBILITY,VALIDATION,"Historical reproducibility depends on complete, attributable source/run lineage.",BLOCKED,B-RUN-01
+ARCH08,N_ARCHIVE_METRIC_REVIEW,N_REPRODUCIBILITY,VALIDATION,Reproducibility requires traceable metric generation and valuation lineage.,BLOCKED,B-PERF-01;B-RUN-01
+E2901,B-DEC-29,D_E029,DECISION,E-029 Option B approval resolves the specification only.,RESOLVED_SPECIFICATION_ONLY,B-DEC-29
+E2902,D_E029,N_E029_UNIVERSE_ID,PROVENANCE,Universe_Snapshot_ID is a mandatory future lineage reference.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2903,D_E029,N_E029_PREDICTION_ID,PROVENANCE,Prediction_Snapshot_ID is a mandatory future lineage reference.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2904,D_E029,N_E029_ELIGIBILITY_ID,PROVENANCE,Execution_Eligibility_Snapshot_ID is a mandatory future lineage reference.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2905,D_E029,N_E029_MODEL_VERSION,PROVENANCE,Model_Version is a mandatory future lineage reference.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2906,D_E029,N_E029_ALLOCATION_POLICY_VERSION,PROVENANCE,Allocation_Policy_Version is a mandatory future lineage reference.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2907,N_E029_UNIVERSE_ID,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Universe reference is manifest lineage, not optimizer input.",REQUIRED_FUTURE_ONLY,B-DEC-29
+E2908,N_E029_PREDICTION_ID,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Prediction reference is manifest lineage, not optimizer input.",REQUIRED_FUTURE_ONLY,B-DEC-29
+E2909,N_E029_ELIGIBILITY_ID,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Eligibility reference is manifest lineage, not optimizer input.",REQUIRED_FUTURE_ONLY,B-DEC-29
+E2910,N_E029_MODEL_VERSION,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Model version is manifest lineage, not optimizer input.",REQUIRED_FUTURE_ONLY,B-DEC-29
+E2911,N_E029_ALLOCATION_POLICY_VERSION,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Allocation version is manifest lineage, not optimizer input.",REQUIRED_FUTURE_ONLY,B-DEC-29
+E2912,N_RISK_DATA_HASH,N_FUTURE_RUN_MANIFEST,PROVENANCE,"Risk_Data_Hash is separately required by E3, not part of E-029 five.",REQUIRED; VALUE UNVERIFIED,B-RISK-01;B-RUN-01
+E2913,N_FUTURE_RUN_MANIFEST,N_DAILY_PROVENANCE,PROVENANCE,Future daily records reference applicable snapshots; no historical IDs generated.,REQUIRED_FUTURE_ONLY,B-DEC-29
+E2914,N_DAILY_PROVENANCE,N_FUTURE_AUDITABILITY,VALIDATION,"Future lineage supports future auditability, not historical clearance.",REQUIRED_FUTURE_ONLY,B-DEC-29
+G01,N_METHOD_IMPLEMENTATION,N_INTEGRATED_VALIDATION,VALIDATION,Implemented/attributable method paths are prerequisites to integrated validation.,BLOCKED,B-IMPL-01;B-METHOD-01;B-TEST-01
+G02,B-TEST-01,N_INTEGRATED_VALIDATION,VALIDATION,Required integrated test evidence is not established.,BLOCKED,B-TEST-01
+G03,N_ALLOCATION_SOLVER,N_INTEGRATED_VALIDATION,VALIDATION,Weights and solver trace are needed to validate allocation behavior.,BLOCKED,B-ALLOC-01;B-RISK-01;B-TEST-01
+G04,N_ORDER_EXECUTION,N_INTEGRATED_VALIDATION,VALIDATION,Execution evidence is required for end-to-end validation.,BLOCKED,B-EXEC-01;B-TEST-01
+G05,N_PORTFOLIO_VALUATION,N_INTEGRATED_VALIDATION,VALIDATION,Valuation continuity and missing/stale behavior must be validated.,BLOCKED,B-STALE-01;B-TEST-01
+G06,N_ARCHIVE_METRIC_REVIEW,N_INTEGRATED_VALIDATION,VALIDATION,Performance and cost treatment require validated upstream evidence.,BLOCKED,B-PERF-01;B-TEST-01
+G07,N_INTEGRATED_VALIDATION,N_GATE_INPUTS,VALIDATION,Integrated validation evidence is one gate prerequisite.,BLOCKED,B-TEST-01;B-GATE-01
+G08,N_ELIGIBLE_UNIVERSE,N_GATE_INPUTS,VALIDATION,A fully verified eligible universe is a gate prerequisite.,BLOCKED,B-UNIV-01;B-GATE-01
+G09,N_REPRODUCIBILITY,N_GATE_INPUTS,PROVENANCE,Historical reproducibility and provenance are gate prerequisites; E-029 does not retrofit them.,BLOCKED,B-RUN-01;B-GATE-01
+G10,N_GATE_INPUTS,B-GATE-01,VALIDATION,Current evidence package fails gate prerequisites; gate remains blocked.,UNSATISFIED,B-GATE-01
+G11,B-GATE-01,D_E021,DECISION,E-021 remains blocked while prerequisites are unsatisfied.,BLOCKED,B-GATE-01
+G12,D_E022,D_E021,DECISION,E-022 remains blocked and unchanged.,BLOCKED,B-GATE-01
+G13,D_E023,D_E021,DECISION,"E-023 is a verified baseline only, not a gate pass.",VERIFIED_BASELINE_ONLY,B-GATE-01
+G14,D_E021,N_FINAL_GATE_STATUS,GATE_CONTROL,Final state remains gate BLOCKED and Phase F DO_NOT_BEGIN.,BLOCKED,B-GATE-01

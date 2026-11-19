@@ -1,0 +1,3 @@
+Symbol,Classification,Reason,Evidence,Verified_Tradable
+BANPU,CONTROLLED_EXCLUSION,Explicitly excluded; unresolved identity/conversion history and missing OHLC data.,B-ID-01; B-EX-02; present in official 2026 membership.,False
+GLOBAL,CONTROLLED_EXCLUSION,Explicitly excluded; identity/price basis and unverified split/action remain unresolved.,B-ID-02; B-EX-03; VENDOR-0003; absent from 2026 H1/H2 official membership.,False

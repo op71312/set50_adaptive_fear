@@ -1,0 +1,5 @@
+Date,SET_Open,SET_High,SET_Low,SET_Close,SET_Volume,Yahoo_Open,Yahoo_High,Yahoo_Low,Yahoo_Close,Yahoo_Volume,Open_Matches_SET,High_Matches_SET,Low_Matches_SET,Close_Matches_SET,Yahoo_Minus_SET_Volume,SET_Source
+2026-11-13,7.05,7.1,6.9,7.1,8360836,7.050000190734863,7.099999904632568,6.900000095367432,7.099999904632568,8360400.0,True,True,True,True,-436.0,https://www.set.or.th/en/market/product/stock/quote/GLOBAL/historical-trading
+2026-11-12,7.05,7.1,6.95,7.05,5221816,7.050000190734863,7.099999904632568,6.949999809265137,7.050000190734863,5221400.0,True,True,True,True,-416.0,https://www.set.or.th/en/market/product/stock/quote/GLOBAL/historical-trading
+2026-11-11,7.25,7.3,6.95,7.0,17914542,7.25,7.300000190734863,6.949999809265137,7.0,17914300.0,True,True,True,True,-242.0,https://www.set.or.th/en/market/product/stock/quote/GLOBAL/historical-trading
+2026-11-10,7.15,7.3,7.05,7.3,7519797,7.150000095367432,7.300000190734863,7.050000190734863,7.300000190734863,7460100.0,True,True,True,True,-59697.0,https://www.set.or.th/en/market/product/stock/quote/GLOBAL/historical-trading

@@ -1,0 +1,190 @@
+{
+  "schema_version": "execution-data-phase1-audit-v1",
+  "audit_id": "execution_data_phase1_20261115T152933Z_64083a5d",
+  "created_at_utc": "2026-11-15T15:29:33.301042+00:00",
+  "strict_constraints_observed": {
+    "yfinance_called": false,
+    "yahoo_redownload_performed": false,
+    "original_snapshot_modified": false,
+    "immutable_copy_modified": false,
+    "price_filling_or_repair_performed": false,
+    "research_backtest_gate_opened": false,
+    "backtest_63_combinations_run": false
+  },
+  "snapshot_integrity": {
+    "pinned_sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "original_path": "D:\\Project_Github\\set_fear_index\\dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet",
+    "original_sha256_before": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "original_sha256_after": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "copy_path": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_v2\\execution_ohlcv_original.parquet",
+    "copy_sha256_before": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "copy_sha256_after": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "original_equals_copy": true
+  },
+  "acquisition_provenance": {
+    "provider": "Yahoo Finance via yfinance.download",
+    "yfinance_version": "1.8.0",
+    "auto_adjust": false,
+    "actions": true,
+    "downloaded_at_utc": "2026-11-15T11:37:11.389684+00:00",
+    "start": "2026-01-05",
+    "end_exclusive": "2026-11-14",
+    "tickers_requested": 83,
+    "tickers_returned": 83,
+    "interval": "UNKNOWN",
+    "group_by": "UNKNOWN",
+    "requested_ticker_list": "UNKNOWN",
+    "unknown_fields": [
+      "interval",
+      "group_by",
+      "requested_ticker_list"
+    ],
+    "repository_history": [
+      "d526415 Initial commit"
+    ],
+    "repository_history_note": "Only initial commit found; notebooks/data are not tracked and no source history recovers unknown request fields.",
+    "notebook_05_original_downloader_cell": "Absent, per notebook documentation."
+  },
+  "missing_ohlc": {
+    "total": 253,
+    "by_field": {
+      "Open": 63,
+      "High": 63,
+      "Low": 63,
+      "Close": 64
+    },
+    "by_symbol": {
+      "BANPU": 253
+    },
+    "date_count": 64,
+    "first_date": "2026-08-13",
+    "last_date": "2026-11-13",
+    "unique_date_symbol_patterns": {
+      "Open|High|Low|Close": 63,
+      "Close": 1
+    },
+    "candidate_volume_state_by_date_symbol": {
+      "NULL_IN_CANDIDATE": 62,
+      "ZERO_IN_CANDIDATE": 1,
+      "POSITIVE_IN_CANDIDATE": 1
+    },
+    "cause_counts": {
+      "Official Trading Holiday": 0,
+      "No Trading / Zero Volume": 0,
+      "Suspended": 0,
+      "Delisted": 0,
+      "Corporate Action / Identity Transition": 0,
+      "Missing Vendor Data": 0,
+      "Unknown": 253
+    },
+    "confirmed_causes": 0,
+    "unresolved": 253,
+    "note": "The prior audit's Yahoo union calendar and zero-volume flag are not official evidence; null Volume does not establish no trading."
+  },
+  "official_sources_reviewed": [
+    {
+      "id": "SET-BANPU-HISTORICAL",
+      "document": "BANPU Historical Trading (SET)",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/BANPU/historical-trading",
+      "effective_date": null,
+      "effective_date_note": "No date-specific historical record was retrieved.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "Returned \"No information found\" for default view; not date-specific evidence.",
+      "resolves_rows": false
+    },
+    {
+      "id": "SET-BANPU-RIGHTS-BENEFITS",
+      "document": "BANPU Rights & Benefits (SET)",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/BANPU/rights-benefits",
+      "effective_date": null,
+      "effective_date_note": "No date-specific 2026 corporate-action record was retrieved.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "No date-specific 2026 corporate-action rows were found in the retrieved content.",
+      "resolves_rows": false
+    },
+    {
+      "id": "SET-BANPU-NEWS",
+      "document": "BANPU News (SET)",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/BANPU/news",
+      "effective_date": null,
+      "effective_date_note": "No date-specific announcement resolving these missing rows was retrieved.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "No date-specific announcement resolving these missing rows was found.",
+      "resolves_rows": false
+    },
+    {
+      "id": "SET-TRADING-HOLIDAYS-EN",
+      "document": "Trading Holidays (SET English)",
+      "url": "https://www.set.or.th/en/market/information/trading-holidays",
+      "effective_date": null,
+      "effective_date_note": "URL returned 404; no document or effective date available.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "SET 404; no calendar conclusion drawn.",
+      "resolves_rows": false
+    },
+    {
+      "id": "SET-TRADING-HOLIDAYS-TH",
+      "document": "Trading Holidays (SET Thai)",
+      "url": "https://www.set.or.th/th/market/information/trading-holidays",
+      "effective_date": null,
+      "effective_date_note": "URL returned 404; no document or effective date available.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "SET 404; no calendar conclusion drawn.",
+      "resolves_rows": false
+    },
+    {
+      "id": "SET-HOME",
+      "document": "SET Homepage",
+      "url": "https://www.set.or.th/en/home",
+      "effective_date": null,
+      "effective_date_note": "Page showed a current market summary, not an effective-dated BANPU record.",
+      "reviewed_at_utc": "2026-11-15T15:29:33.301042+00:00",
+      "result": "Current market summary only; no BANPU date-specific historical data or calendar.",
+      "resolves_rows": false
+    }
+  ],
+  "required_official_inputs_missing": [
+    "D:\\Project_Github\\set_fear_index\\dataset\\SET_Execution_OHLCV_Source_Patch.csv",
+    "D:\\Project_Github\\set_fear_index\\dataset\\SET_trading_calendar_2026.csv",
+    "D:\\Project_Github\\set_fear_index\\dataset\\official_corporate_actions_2026.csv"
+  ],
+  "official_row_level_confirmations": 0,
+  "source_files_sha256_before": {
+    "original_snapshot": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "immutable_copy": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "sidecar": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+    "lineage": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "verified_status": "3ece2ea61de8d6d5b5a538c6107f15dc654b2b803b4f0fdd1b1f392787aadb10",
+    "price_audit": "08bfca3ab18f16921a0d9b617bdab63366386b394b1d7745b5998e88c30ee74a",
+    "banpu_audit": "877d910c9e2b92eca6f1c0c7957184aff18c0426a88ac0023f51f33a54fb8a96",
+    "prior_run_manifest": "36029c52c56de1aeeab22494d0cc2acbf42a0445a793e73ea2013900e0e9b4c0"
+  },
+  "output_files": {
+    "execution_missing_rows_detail.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_missing_rows_detail.csv",
+    "execution_missing_reconciliation.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_missing_reconciliation.csv",
+    "execution_provenance_findings.json": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_provenance_findings.json",
+    "execution_data_phase1_report.md": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_data_phase1_report.md",
+    "execution_data_phase1_gate.csv": "D:\\Project_Github\\set_fear_index\\backtest_results\\execution_data_phase1_20261115T152933Z_64083a5d\\execution_data_phase1_gate.csv"
+  },
+  "source_files_sha256_after": {
+    "original_snapshot": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "immutable_copy": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+    "sidecar": "0b02751e384a678a441ba1c86e9c33123cd3deb574d4cbdab77ecdf00de6e7e9",
+    "lineage": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+    "verified_status": "3ece2ea61de8d6d5b5a538c6107f15dc654b2b803b4f0fdd1b1f392787aadb10",
+    "price_audit": "08bfca3ab18f16921a0d9b617bdab63366386b394b1d7745b5998e88c30ee74a",
+    "banpu_audit": "877d910c9e2b92eca6f1c0c7957184aff18c0426a88ac0023f51f33a54fb8a96",
+    "prior_run_manifest": "36029c52c56de1aeeab22494d0cc2acbf42a0445a793e73ea2013900e0e9b4c0"
+  },
+  "regression_checks": {
+    "snapshot_and_copy_match_pinned_before_and_after": true,
+    "source_and_existing_audit_hashes_unchanged": true,
+    "missing_cells_enumerated": true,
+    "missing_by_field_matches_expected": true,
+    "all_causes_unresolved_without_official_evidence": true,
+    "filled_or_modified_price_cells": 0,
+    "yfinance_or_yahoo_redownload": false,
+    "research_backtest_gate_open": false,
+    "backtest_63_sets_executed": false
+  }
+}

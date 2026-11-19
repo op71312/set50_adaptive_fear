@@ -1,0 +1,33 @@
+{
+  "status": "superseded_not_for_strategy_selection",
+  "archived_on": "2026-11-15",
+  "reason": [
+    "Prior run used adjusted Master OHLC as execution prices.",
+    "Single-asset allocation bypassed the agreed 25% cap in some methods.",
+    "Total return and CAGR omitted the initial-equity baseline.",
+    "BANPU stale valuations reached 93 calendar days."
+  ],
+  "files": [
+    {
+      "file": "daily_portfolio_results.csv",
+      "size_bytes": 1021901
+    },
+    {
+      "file": "daily_predictions_audit.csv",
+      "size_bytes": 55098721
+    },
+    {
+      "file": "performance_summary.csv",
+      "size_bytes": 8742
+    },
+    {
+      "file": "portfolio_valuation_audit.csv",
+      "size_bytes": 6031232
+    },
+    {
+      "file": "transactions.csv",
+      "size_bytes": 258677
+    }
+  ],
+  "note": "Archived without modification; files are retained for audit and were not regenerated."
+}

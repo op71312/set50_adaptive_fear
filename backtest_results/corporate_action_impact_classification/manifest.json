@@ -1,0 +1,208 @@
+{
+  "schema_version": "corporate-action-impact-classification-manifest-v1",
+  "execution_timestamp": "2026-11-16T16:53:52+07:00",
+  "scope": "Read-only evidence classification of all original corporate-action ledger rows; local evidence only.",
+  "input_files": [
+    {
+      "path": "backtest_results\\corporate_action_ledger_official.csv",
+      "sha256": "613848ab5bd075654995b42515dc140a943eccc3e1fac9ddd84b2f192e1f1ee5",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\corporate_action_vendor_events.csv",
+      "sha256": "b57ab721add1546e97bc8e45f1a8e8813838412f742da8674e79444562725afc",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_B_evidence_recovery_20261116T1147\\corporate_action_evidence_recovery.csv",
+      "sha256": "69820cc12a108cea939e0a8be1f5711d609f4c23f50ad1734a2cafafd7c9a893",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_B_evidence_recovery_20261116T1147\\corporate_action_recovery_report.md",
+      "sha256": "ed5b98de4687c96a6e7f7d3c04b471b604e2a295336abbf131c283ad49062e49",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\corporate_action_relevance_2026.csv",
+      "sha256": "b98f6ac7e8697f4956e785990d15442f97ea0182104024624f09c2f5eb73aec9",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\corporate_action_relevance_report.md",
+      "sha256": "aabd0fcd8f3b3f320fff41de7b5949b1e967448afdfce83ce8de689929a4ec47",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\security_identity_scope_2026.csv",
+      "sha256": "c0efec5cf389fd363125df668ccdbb5791181422c1bb3e7e2a9ef5ef2e4993fc",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\security_identity_report.md",
+      "sha256": "c2f35454b4631d93a7e59424d9f288e7bd3a05fb1b397e2407cea56799c6941a",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\membership_2026_primary_evidence_audit.csv",
+      "sha256": "0458ce66c9628e6f711e58fcd94e65a9952cf3b618354b70a3f46847b2a2b4ba",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_D_universe_consistency_20261116\\phase_D_corporate_action_scope.csv",
+      "sha256": "19b5ccb01a5af17b9b8f7089f2fd5e7f66967072cab07f616bb1498cd427d969",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_D_universe_consistency_20261116\\phase_D_corporate_action_report.md",
+      "sha256": "d73fc0e6256dc1fa79398386f30603bf358ec012092608343bfe9a3116aae61c",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\security_identity_mapping.csv",
+      "sha256": "ace78e9e3ecab624150229dd3ae6d6437bc7211d034d4742076934d090da26c7",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\execution_data_lineage.json",
+      "sha256": "c9f146b9a1154b7dbf18fe1e535d3e57823fd17f0cc5d87914450877415ddf80",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\verified_execution_data_status.json",
+      "sha256": "3ece2ea61de8d6d5b5a538c6107f15dc654b2b803b4f0fdd1b1f392787aadb10",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\banpu_impact_isolation.csv",
+      "sha256": "56260905e8ad488516be95b3351d72ee3f94579497647d3b15ad03f9c08cd02a",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\banpu_impact_report.md",
+      "sha256": "87bbfe1b152e094b0c02d428c5609d44ef5637c151a04a57f4fac30d95edbfd2",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\pre_backtest_readiness_reassessment\\readiness_reassessment_report.md",
+      "sha256": "263478bf13d37f9444eee06ba76f2670554e607fac746821da9b564bccfcac4e",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\execution_price_integrity_audit.csv",
+      "sha256": "08bfca3ab18f16921a0d9b617bdab63366386b394b1d7745b5998e88c30ee74a",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\execution_price_tick_audit_original.csv",
+      "sha256": "a1458e1f72db6b1347676e6493ed3ace2a8fbbf50f857d9c0fa56730d07943b6",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "dataset\\verified_build_20261113_152948\\ohlcv_data_quality_investigation\\corporate_actions_review.csv",
+      "sha256": "26765609a3a9454b484339fba921fcb85386edbbcd7ae4fe13d6a5138c42b2b7",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "dataset\\verified_build_20261113_152948\\ohlcv_data_quality_investigation\\ohlc_anomalies.csv",
+      "sha256": "393e2b9eb2870655f7bb3f365714fda4aed8293ffbb7b474abc621a81669dfe5",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "05_backtest.ipynb",
+      "sha256": "b249fdc28ace8c546b15ca2e6ec25371fa9bfa84af201fcc9762c3fc6077be41",
+      "role": "hash-only protected input"
+    },
+    {
+      "path": "06_research_backtest.ipynb",
+      "sha256": "4b390d06306f74bd9360768fa2ce9ac86a86429fcf6cac66f1bc7800748a1a1c",
+      "role": "hash-only protected input"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\sources\\SET50_100_H1_2026.pdf",
+      "sha256": "9e07244ef3aca2929100a36c2e9c2384533624a22560f6149dc23201cd3f1699",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "backtest_results\\phase_C_vendor_validation_20261116\\sources\\SET50-SET100-H2-2026.pdf",
+      "sha256": "a9bff8e6a2fd1e86d2449c1f3eaac534053aecfb74b9649f5626e000d10f7eb2",
+      "role": "inspected local evidence"
+    },
+    {
+      "path": "dataset\\verified_build_20261113_152948\\SET50_Execution_OHLCV_2026_Yahoo_auto_adjust_false_snapshot.parquet",
+      "sha256": "14ca82c9a481118910952cfaaaeea08daecd6548d9d99e19a66e4d9c51ef986a",
+      "role": "hash-only protected input"
+    },
+    {
+      "path": "backtest_results\\execution_data_v2\\execution_ohlcv_corrected_v2.parquet",
+      "sha256": "4d35f215ce3a0243b13ef3eb582fc7904b0de8920ad85c78ee14497ff1fc5428",
+      "role": "hash-only protected input"
+    }
+  ],
+  "output_sha256": {
+    "corporate_action_impact_classification.csv": "c85ef835a5fefad5172e559a1774fd926f237289c720e5ff17f73d0cd5eaa3a5",
+    "corporate_action_classification_summary.md": "eb13f365e229716f905636708a7700005fd1c84aa66b642511cc1abb194e0e06",
+    "unresolved_event_evidence_register.csv": "f34741fe408a32016e0c2291452659614ae70faf093768282092f19d8d27abf8",
+    "security_level_impact_summary.csv": "4255ea2191220dbdef0d85b294e50dbdd41009412ca4fc2c33b1343f42c746b0",
+    "corporate_action_classification_validation.md": "861dbc56f7532c6b1ac8052e2460a422e6f97fd8e642497fbdea406d64a1eeab"
+  },
+  "manifest_self_hash_note": "manifest.json is not included in its own output_sha256 because a file cannot contain its own final hash.",
+  "validation_summary": {
+    "ledger_rows": 141,
+    "classified_rows": 141,
+    "unique_event_ids": 141,
+    "event_existence_status_counts": {
+      "SUPPORTED_SECONDARY": 138,
+      "CANDIDATE_ONLY": 3
+    },
+    "official_evidence_status_counts": {
+      "VENDOR_ONLY": 138,
+      "NO_EVIDENCE_FOUND": 3
+    },
+    "confirmed_impacts": {
+      "price": 0,
+      "share": 0,
+      "cash": 0,
+      "security_identity": 0
+    },
+    "potential_indicators": {
+      "price": 141,
+      "share": 4,
+      "cash": 140,
+      "security_identity": 2
+    },
+    "membership_relevance_counts": {
+      "ACTIVE_MEMBER_ON_RECORDED_DATE": 89,
+      "NOT_MEMBER_ON_RECORDED_DATE": 44,
+      "UNION_MEMBER_OUTSIDE_RECORDED_DATE": 8
+    },
+    "entirely_unresolved_rows": 141,
+    "suspected_relationship_groups": 3,
+    "symbols_represented": 77,
+    "symbols_with_multiple_records": 57,
+    "symbols_in_suspected_relation_groups": 3,
+    "gate": "BLOCKED",
+    "phase_f": "DO_NOT_BEGIN"
+  },
+  "pre_existing_adjusted_candidate": {
+    "path": "backtest_results\\execution_data_v2\\execution_ohlcv_corrected_v2.parquet",
+    "sha256": "4d35f215ce3a0243b13ef3eb582fc7904b0de8920ad85c78ee14497ff1fc5428",
+    "factor": 1.037037037037037,
+    "rows_changed": 36,
+    "evidence_status": "USER_PROVIDED_TERMS; OFFICIAL_SOURCE_URL_NOT_ATTACHED",
+    "verified_dataset_created": false,
+    "created_or_modified_by_this_workstream": false
+  },
+  "source_files_modified_by_this_workstream": false,
+  "restrictions_confirmed": {
+    "internet_or_external_services_used": false,
+    "market_data_downloaded": false,
+    "yfinance_called": false,
+    "historical_backtest_run": false,
+    "63_combinations_run": false,
+    "notebook_05_or_06_modified": false,
+    "gate_opened_or_overridden": false,
+    "phase_f_started": false,
+    "corporate_action_applied_by_this_workstream": false
+  }
+}

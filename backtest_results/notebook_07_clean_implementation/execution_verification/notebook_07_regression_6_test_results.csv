@@ -1,0 +1,7 @@
+﻿Case,Status,Details
+R01_normal_class_always_hold_all_strategies,PASS,
+R02_cartesian_strategy_matrix,PASS,
+R03_cvar_boundary_ties_share_fractionally,PASS,
+R04_sharpe_sortino_obey_e004_252_intervals,PASS,
+R05_nonfinite_features_fail_closed,PASS,
+R06_performance_schema_contains_required_metrics,PASS,

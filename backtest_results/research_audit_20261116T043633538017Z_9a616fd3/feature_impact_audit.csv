@@ -1,0 +1,3 @@
+Symbol,Feature_Rows,Feature_Rows_2026,Rows_With_All_Six_Features,Rows_With_Target_Label_Audit_Only,BANPU_Post_2026_08_04_Rows,Impact_Status
+GLOBAL,2638,210,2061,2638,,BLOCKED: adjusted-price/identity lineage and rebuilt-feature comparison unavailable
+BANPU,2375,147,1829,2375,7.0,BLOCKED: adjusted-price/identity lineage and rebuilt-feature comparison unavailable

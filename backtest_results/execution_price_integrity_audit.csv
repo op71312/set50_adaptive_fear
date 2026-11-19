@@ -1,0 +1,10 @@
+Check,Observed,Result
+Provider request metadata,Yahoo Finance via yfinance.download; auto_adjust=False; actions=True,PASS
+Exact snapshot request manifest,interval=UNKNOWN; group_by=UNKNOWN; tickers_list_present=True,BLOCKED
+Exchange or authorized execution source,Yahoo Finance via yfinance.download,BLOCKED
+Finite Open/High/Low/Close,"{'Open': 63, 'High': 63, 'Low': 63, 'Close': 64}",FAIL
+Positive OHLC prices,0,PASS
+OHLC range consistency,0,PASS
+Unique Date/Symbol keys,0,PASS
+SET tick-size conformity after candidate basis change,raw_GLOBAL=141; corrected_GLOBAL_at_2e-6=0; strict_1e-6_aligned=125/141; verified_source=False,BLOCKED
+Zero-volume bars are excluded from execution,98,PASS

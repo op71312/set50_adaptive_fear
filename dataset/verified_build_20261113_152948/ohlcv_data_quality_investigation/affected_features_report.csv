@@ -1,0 +1,7 @@
+﻿Issue,Feature_or_Target,Potential_Impact,Evidence_Count,Assessment,Recommendation
+Close boundary anomaly,"daily_return, momentum_20d, volatility_ret",Inconsistent Close may alter returns and dependent rolling windows around the row.,193,Potential; values not recomputed,Flag; verify bar first.
+Close boundary anomaly,"Corr_60d, VolRank, CorrRank, target",Close-derived returns can affect correlation/volatility and cross-sectional ranks; target may depend on next observed return.,193,Potential; ranks/target unchanged,Review after source verification.
+Volume revision,"vol_z, target, LiquidityRank","Changed volume can affect volume z-score, target input and rolling trading-value rank.",52,Potential; no feature recomputed,Keep source versions separate and flag affected windows.
+Missing symbol/date rows,"daily_return, rolling features, Corr_60d",Row-based windows may span longer calendar intervals; next observed return may cover multiple sessions.,67,Row absence confirmed; trading-day cause unresolved,No forward fill; resolve gap semantics.
+Missing member/date rows,"VolRank, CorrRank, LiquidityRank",No rank exists for an absent bar; available cross-section is smaller than expected membership.,67,Coverage gap; no fabricated rank,Report expected and available membership counts.
+Retrospective price revision,All price-derived features/ranks,Current adjusted-price history may differ from data available at historical prediction time.,48434,Potential point-in-time concern,Define point-in-time source policy.

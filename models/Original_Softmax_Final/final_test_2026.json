@@ -1,0 +1,45 @@
+{
+    "year": 2026,
+    "accuracy": 0.8305,
+    "macro_f1": 0.3936,
+    "balanced_accuracy": 0.3932,
+    "log_loss": 0.7459,
+    "classification_report": {
+        "Panic": {
+            "precision": 0.1321,
+            "recall": 0.0907,
+            "f1": 0.1075,
+            "support": 386
+        },
+        "FOMO": {
+            "precision": 0.1503,
+            "recall": 0.18,
+            "f1": 0.1638,
+            "support": 689
+        },
+        "Normal": {
+            "precision": 0.9103,
+            "recall": 0.9089,
+            "f1": 0.9096,
+            "support": 9361
+        }
+    },
+    "confusion_matrix": [
+        [
+            35,
+            60,
+            291
+        ],
+        [
+            18,
+            124,
+            547
+        ],
+        [
+            212,
+            641,
+            8508
+        ]
+    ],
+    "prediction_rule": "Argmax"
+}
