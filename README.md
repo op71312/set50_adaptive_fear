@@ -1,26 +1,86 @@
-# set_fear_index ? Comprehensive Project Retrospective
+# SET50 Adaptive Fear & Alpha System
 
-**Single-file edition:** this README consolidates the full technical retrospective and all companion summaries/tables. Evidence cut-off: 2026-11-19. It was assembled from existing repository reports and the named RPR2 output; no model training, prediction, download, or backtest was rerun.
+**Notebook-based quantitative research project**
+
+**Evidence cut-off:** 2026-11-19
+
+This repository explores a research pipeline for classifying SET50 market conditions as Panic, FOMO, or Normal, mapping predictions to long-only actions, and comparing portfolio allocation methods. It is a research prototype—not a production trading system, investment recommendation, or verified-tradable backtest.
+
+## Project overview
+
+The workflow combines historical market data and membership evidence, feature engineering, a frozen Softmax model, strategy-action mappings, seven allocation methods, and a cost-aware Research Proxy simulation. The project is organized around sequential Jupyter notebooks, with datasets, model artifacts, run outputs, and audit evidence kept in separate directories.
+
+### Research workflow
+
+1. [01_dataset.ipynb](./01_dataset.ipynb) — collect and prepare the historical dataset.
+2. [02_eda_parquet.ipynb](./02_eda_parquet.ipynb) — explore the saved Parquet data.
+3. [03_feature_engineering.ipynb](./03_feature_engineering.ipynb) — construct targets and model features.
+4. [04_model.ipynb](./04_model.ipynb) — train, compare, and evaluate model candidates; the documented baseline uses a frozen artifact.
+5. [05_backtest.ipynb](./05_backtest.ipynb) and [06_research_backtest.ipynb](./06_research_backtest.ipynb) — historical and research-backtest development.
+6. [07_dynamic_universe_portfolio_backtest_v2_corrected.ipynb](./07_dynamic_universe_portfolio_backtest_v2_corrected.ipynb) — corrected portfolio-engine implementation.
+7. [08_set50_real_data_backtest_runner.ipynb](./08_set50_real_data_backtest_runner.ipynb) — Research Proxy runner.
+
+The notebooks are not guaranteed to be independently reproducible from a clean checkout: input snapshots, environment definitions, and historical source-to-run provenance have documented limitations. Review the status and evidence below before executing any workflow.
+
+### Repository structure
+
+```text
+.
+├── 01_dataset.ipynb … 08_set50_real_data_backtest_runner.ipynb
+├── phase_a_universe.py
+├── dataset/
+│   ├── parquet/
+│   ├── summary/
+│   └── verified_build_*/
+├── models/
+│   └── Original_Softmax_Final/
+├── backtest_results/
+│   ├── phase_* evidence and audits/
+│   ├── notebook_* research-proxy runs/
+│   └── project_retrospective_report/
+├── md/
+└── README.md
+```
+
+The existing notebook and evidence paths are intentionally retained. Run manifests and downstream notebooks refer to these paths and, in some cases, to exact file hashes; moving historical inputs or outputs would weaken traceability or break path-dependent workflows.
+
+### AI-assisted development
+
+AI tools were used as a development assistant to debug selected code, investigate root causes that were not immediately obvious, and help author portions of the implementation. This included assistance tracing notebook execution issues, data and lineage inconsistencies, and backtest accounting behavior. AI-generated suggestions were treated as hypotheses and checked against repository evidence and available validation; AI assistance does not replace human review, reproducibility checks, or independent financial validation.
+
+### Current research status
+
+The documented baseline is `RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565`. Its output package reports 63 `COMPLETED_WITH_LIMITATIONS` combinations. The saved daily portfolio output has 150 equity observations per combination (149 observed return intervals), on an `OBSERVED_VENDOR_CALENDAR`.
+
+| Status | Value |
+|---|---|
+| `RESEARCH_BACKTEST_GATE` (run-scoped) | `CONDITIONAL_OPEN` |
+| `EXECUTION_VALIDATION_GATE` | `BLOCKED` |
+| `Canonical_Historical_Gate` | `BLOCKED` |
+| `PHASE_F` | `DO_NOT_BEGIN` |
+
+Results are a `PRICE_RETURN` Research Proxy using vendor data and theoretical fractional shares. They are not verified exchange-tradable performance, do not establish Total Shareholder Return, and should not be interpreted as investment advice. See the [full retrospective](#comprehensive-technical-retrospective) for evidence, calculations, limitations, and lineage details.
 
 ## Contents
 
-1. Master technical report
-2. Executive summary
-3. Project timeline
-4. Problem-resolution matrix
-5. Model performance summary
-6. Backtest 63-combination source table
-7. Research limitations
-8. Reproducibility checklist
-9. Evidence index
-10. Report SHA-256 manifest
+- [Project overview](#project-overview)
+- [Research workflow](#research-workflow)
+- [Repository structure](#repository-structure)
+- [AI-assisted development](#ai-assisted-development)
+- [Current research status](#current-research-status)
+- [Comprehensive technical retrospective](#comprehensive-technical-retrospective)
+- [Executive summary](#executive-summary)
+- [Project timeline](#project-timeline)
+- [Problem-resolution matrix](#problem-resolution-matrix)
+- [Model performance summary](#model-performance-summary)
+- [63-combination backtest results](#63-combination-backtest-results)
+- [Evidence index](#evidence-index)
+- [Research limitations](#research-limitations)
+- [Reproducibility checklist](#reproducibility-checklist)
+- [Report SHA-256 manifest](#report-sha-256-manifest)
 
-## 1. Master technical report
+## Comprehensive technical retrospective
 
-## SET50 Adaptive Fear & Alpha System
-### Comprehensive Technical Retrospective
-
-**Evidence cut-off:** 2026-11-19  
 **Purpose:** repository-based technical retrospective; not a journal manuscript, investment recommendation, or execution-validation report.  
 **Primary backtest artifact reviewed:** `RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565`  
 **Status:** Research Proxy baseline only; canonical historical validation remains blocked.
@@ -312,7 +372,7 @@ The reproducibility checklist is [Reproducibility_Checklist.md](backtest_results
 
 This report neither changes gate/blocker statuses nor starts Phase F. RPR2 is a research proxy baseline, not a Verified Tradable Backtest.
 
-## 2. Executive summary
+## Executive summary
 
 
 ### SET50 Adaptive Fear & Alpha System
@@ -345,7 +405,7 @@ The outputs are suitable only as a **provisional, exploratory Research Proxy bas
 
 See [Master Technical Report](backtest_results/project_retrospective_report/SET50_Adaptive_Fear_Alpha_System_Comprehensive_Technical_Report.md), [Research Limitations](backtest_results/project_retrospective_report/Research_Limitations.md), and [Backtest_63_Combination_Summary.csv](backtest_results/project_retrospective_report/Backtest_63_Combination_Summary.csv).
 
-## 3. Project timeline
+## Project timeline
 
 All recorded milestones, dates, evidence, and statuses.
 
@@ -363,7 +423,7 @@ Distinct Run ID; date not established,RPR2-34A9 separate output finalization,Sep
 2026-11-19,Retrospective report evidence cut-off,Read-only inspection and arithmetic reconciliation of existing files.,"No model fit, inference, data download, or backtest rerun.",Report artifacts produced; gates unchanged.,backtest_results/project_retrospective_report/,COMPLETED
 ```
 
-## 4. Problem-resolution matrix
+## Problem-resolution matrix
 
 Issue, evidence, root cause, disposition, and residual risk.
 
@@ -385,7 +445,7 @@ P13,Execution validation,Vendor Open and theoretical fractional shares are not e
 P14,Metric basis,Annualized metrics not reported under observed vendor calendar; turnover denominator is inherited implementation behavior.,"RPR2 performance summary, Notebook 07, Phase E register",No approved turnover denominator found; no verified exchange intervals.,LIMITED,Do not report verified CAGR/Sharpe/Sortino or policy-approved turnover.,backtest_results/notebook_08_research_proxy_v2/RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565/performance_summary_63.csv
 ```
 
-## 5. Model performance summary
+## Model performance summary
 
 Saved CV, thresholded validation, frozen test, and separate candidate experiment metrics.
 
@@ -397,7 +457,7 @@ final_softmax_model.joblib,Frozen test report,2026,10436,Argmax,0.8305,0.3936,0.
 Period-aware SMOTE candidate (not final baseline),Validation,2025,11824,Candidate estimator predict,0.8423,0.4090,0.4125,0.7338,0.1583,0.2040,0.1783,544,0.1494,0.1167,0.1310,617,0.9187,0.9168,0.9178,10663,SAVED_NOTEBOOK_OUTPUT_SEPARATE_EXPERIMENT,Do not attribute this result to the frozen Original Softmax model.
 ```
 
-## 6. Backtest 63-combination results
+## 63-combination backtest results
 
 Full named baseline output rows and fields; annualized metrics remain NOT_REPORTED.
 
@@ -468,7 +528,7 @@ RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565,S9_PanicHold_FOMOHold,CVaR,COMPLETED_WITH_
 RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565,S9_PanicHold_FOMOHold,MPT,COMPLETED_WITH_LIMITATIONS,New frozen-model research proxy; not execution-validated or exchange-tradable.,149,49,53,0,BANPU;GLOBAL,0,0,0,0,0,0,0,1,60,FIXED_60_COMMON_COMPLETE_PRIOR_OBSERVATIONS,210,UNIV-f6bd0886cb00cf6fb96f5ba7,PRED-b0fb67dfced05fd86da80d1f,ELIG-e9f7c8cd6f67ebdfdb91f20e,FROZEN_MODEL_SHA256:8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7,PHASE_E_POLICY_SHA256:683e514ce72ea0a77d1085de,8ec9433bd5fa6419b7f6870f1058917b7fb3f6f0cb66cbc771a45f6956a048c7,PRICE_RETURN_EXCLUDING_UNVERIFIED_DISTRIBUTIONS,NOT_REPORTED_OBSERVED_VENDOR_CALENDAR,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,RPR2-2DF88EE33C7C4A88BBE2CA46B3F79565
 ```
 
-## 9. Evidence index
+## Evidence index
 
 Claim-to-source mapping and verification limitations.
 
@@ -505,7 +565,7 @@ Run source hash gap,RPR2 baseline manifest and current Notebook 08 files,Hash co
 Local Git history depth,.git log,Repository history,One initial commit,LIMITED,Cannot reconstruct full chronology from commits.
 ```
 
-## 7. Research limitations
+## Research limitations
 
 
 ### Evidence status
@@ -566,7 +626,7 @@ The evidence does not support claims that:
 
 Prioritize primary-source 2017 membership and security identity/corporate-action records, official SET calendar, complete execution request provenance, verified board-lot rules, an immutable training-data/run chain, exact Notebook 08 source for the named run, and an independent subsequent out-of-sample period. Any future execution-validation work requires separate authorization and must not retroactively relabel this proxy.
 
-## 8. Reproducibility checklist
+## Reproducibility checklist
 
 
 ### Dataset and feature pipeline
@@ -626,7 +686,7 @@ Prioritize primary-source 2017 membership and security identity/corporate-action
 
 The supporting files are linked in [Evidence_Index.csv](backtest_results/project_retrospective_report/Evidence_Index.csv) and hashed in [Report_Manifest_SHA256.txt](backtest_results/project_retrospective_report/Report_Manifest_SHA256.txt).
 
-## 10. Report SHA-256 manifest
+## Report SHA-256 manifest
 
 These hashes identify the companion report artifacts as they were generated. The report directory remains available; this README consolidates the content rather than replacing those audit copies. The manifest excludes itself and the README (self-hashing is not embedded).
 
